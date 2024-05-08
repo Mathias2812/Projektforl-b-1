@@ -9,10 +9,12 @@ const pool = new Pool({
   },
 });
 
+
+
 //route for /Data
 const getData = (request, response) => {
     pool.query(
-      "SELECT * FROM Country WHERE Country_name = 'United States' ",
+      "SELECT",
       (error, results) => {
       if (error) {
         throw error;
@@ -20,7 +22,6 @@ const getData = (request, response) => {
       response.status(200).json(results.rows);
     });
   };
-
 
 
 
