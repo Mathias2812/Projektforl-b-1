@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test"></div>
+    <script>
+        // Specify the API endpoint for food
+        const apiUrl = 'http://localhost:4000/Data';
+
+        // Make a GET request using the Fetch API
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(Data => {
+                // Process the retrieved foods
+                let html = '';
+                Data.forEach(Country => {
+                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
+                    console.log(Country);
+                });
+                document.getElementById("test").innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+    </script>
+</body>
+</html>
