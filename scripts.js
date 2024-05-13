@@ -18,6 +18,11 @@ let colorScale = d3.scaleThreshold()
   .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
   .range(d3.schemeBlues[7]);
 
+  // Define the function to remove Antarctica
+function removeAntarctica(topo) {
+    topo.features = topo.features.filter(feature => feature.properties.name !== "Antarctica");
+    return topo;
+  }
 
 // Load external data and boot
 d3.queue()
@@ -32,6 +37,7 @@ function ready(error, topo) {
       .transition()
       .duration(200)
       .style("opacity", .5)
+      .style("stroke", "black")
     d3.select(this)
       .transition()
       .duration(200)
