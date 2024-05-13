@@ -22,18 +22,6 @@ const getData = (request, response) => {
   };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   //route for /insert-food
 const insertData = (request, response) => {
     const { Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6} = request.body;

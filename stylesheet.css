@@ -1,0 +1,73 @@
+.box {
+    margin-left: auto; 
+            margin-right: auto; 
+            width: 100%;
+            height: 600px; 
+            background-color: dimgray;
+            padding: 50px; 
+            box-sizing: border-box; 
+            margin-bottom: 50px;
+            margin-top: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+nav {   
+    text-align: center;
+}
+footer {
+    text-align: center;
+}
+
+
+.box2 {
+    display: flex;
+    text-align: center;
+}
+
+.top5, .factBox {
+    background-color: dimgray;
+    width: 50%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top5 {
+    margin-right: 20px;
+    text-align: center;
+}
+.factBox {
+    margin-left: 20px;
+    text-align: center;
+}
+.worldMap {
+    text-align: center;
+}
+
+.graphBox {
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100%;
+    height: 600px; 
+    background-color: dimgray; 
+    padding: 100px; 
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    
+}
+.navBar {
+    top: 0;
+    left: 0; 
+    width: 500px; 
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
