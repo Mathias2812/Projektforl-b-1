@@ -17,7 +17,7 @@ let data = d3.map();
 let colorScale = d3.scaleThreshold()
   .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
   .range(d3.schemeBlues[7]);
-  
+
 // Load external data and boot
 d3.queue()
   .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
@@ -26,6 +26,7 @@ d3.queue()
 
 function ready(error, topo) {
 
+  // Når musen er på kortet
   let mouseOver = function(d) {
     d3.selectAll(".Country")
       .transition()
@@ -39,6 +40,7 @@ function ready(error, topo) {
 
   }
 
+  // Når musen ikke er på kortet
   let mouseLeave = function(d) {
     d3.selectAll(".Country")
       .transition()
@@ -47,7 +49,6 @@ function ready(error, topo) {
     d3.select(this)
       .transition()
       .duration(200)
-  
   }
 
   // Draw the map
