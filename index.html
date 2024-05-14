@@ -4,108 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- Inkludér Chart.js bibliotek -->
+    <!-- Tilføj Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-<!-- Filinput til at vælge CSV-filen -->
-<input type="file" id="fileInput" accept=".csv">
+    <div id="test"></div>
 
-<div id="test"></div>
+    <canvas id="myChart" width="400" height="200"></canvas> <!-- Søjlediagrammet vil blive vist her -->
 
-<script>
-    // Funktion til at læse en CSV-fil
-    function readCSV(file, callback) {
-        const reader = new FileReader();
-        reader.onload = function() {
-            callback(reader.result);
-        };
-        reader.readAsText(file);
-    }
+    <script>
+        // Specify the API endpoint for food
+        const apiUrl = 'http://localhost:4000/Data';
 
-    // Håndter filinputændringer
-    document.getElementById('fileInput').addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        readCSV(file, function(csv) {
-            processData(csv);
-        });
-    });
-
-    // Processer CSV-data
-    function processData(csv) {
-        // Del CSV'en ved linjeskift
-        const rows = csv.split('\n');
-        let countries = [];
-        let totalWaste = [];
-
-        // Gennemgå hver række og udtræk data
-        rows.forEach(row => {
-            const columns = row.split(',');
-            const country = columns[0];
-            const waste = parseInt(columns[1]); // antager, at det andet felt er affaldet
-
-            countries.push(country);
-            totalWaste.push(waste);
-        });
-
-        // Opret søjlediagram
-        createChart(countries, totalWaste);
-    }
-
-    // Opret søjlediagram
-    function createChart(countries, totalWaste) {
-        const ctx = document.getElementById('test').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: countries,
-                datasets: [{
-                    label: 'Total Waste',
-                    data: totalWaste,
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
+        // Make a GET request using the Fetch API
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
-            }
-        });
-    }
+                return response.json();
+            })
+            .then(Data => {
+                // Process the retrieved foods
+                let html = '';
+                Data.forEach(Country => {
+                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
+                    console.log(Country);
+                });
+                document.getElementById("test").innerHTML = html;
 
-    // Specify the API endpoint for food
-    const apiUrl = 'http://localhost:4000/Data';
+                // Prepare data for the chart
+                const labels = Data.map(country => country.country_name);
+                const data = Data.map(country => country.total_waste);
 
-    // Make a GET request using the Fetch API
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(Data => {
-            // Process the retrieved foods
-            let html = '';
-            Data.forEach(Country => {
-                html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
-                console.log(Country);
+                // Get the canvas element
+                const ctx = document.getElementById('myChart').getContext('2d');
+
+                // Create the chart
+                const myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Total Waste',
+                            data: data,
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)', // Juster farven efter behov
+                            borderColor: 'rgba(255, 99, 132, 1)', // Juster farven efter behov
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
-            document.getElementById("test").innerHTML = html;
 
-            // Optionally, you can call processData here if you want to process CSV data after fetching API data.
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-
-</script>
+    </script>
 </body>
 </html>
