@@ -1,6 +1,6 @@
 
 // Ændr størrelsen på SVG-elementet
-let svgWidth = 1400; // Ny bredde
+let svgWidth = 1200; // Ny bredde
 let svgHeight = 600; // Ny højde
 let svg = d3.select("svg")
   .attr("width", svgWidth)
