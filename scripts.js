@@ -26,7 +26,7 @@ d3.queue()
 
 function ready(error, topo) {
 
-  // Når musen er på kortet
+  // When the mouse is on the map
   let mouseOver = function(d) {
     d3.selectAll(".Country")
       .transition()
@@ -40,7 +40,7 @@ function ready(error, topo) {
 
   }
 
-  // Når musen ikke er på kortet
+  // When the mouse is off the map
   let mouseLeave = function(d) {
     d3.selectAll(".Country")
       .transition()
