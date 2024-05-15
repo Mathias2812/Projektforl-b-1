@@ -103,5 +103,15 @@ footer {
 #box3Heading {
     font-size: 30px;
     margin-top: auto;
-    margin-left: 500px;
+    margin-left: 600px;
+    color: aqua;
+    text-shadow: 3px 3px 3px black;
+}
+
+#box3text {
+    margin-top: auto;
+    margin-left: 600px;
+    text-align: auto;
+    color: aqua;
+    text-shadow: 3px 3px 3px black;
 }
