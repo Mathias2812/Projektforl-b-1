@@ -20,22 +20,35 @@
         }).addTo(map);
 
         // Tilføj et Choropleth-lag
-        fetch('plastic-pollution-by-country-2024.json') // JSON-fil med plastforurening pr. land
+        fetch('output.geojson') // GeoJSON-fil med plastforurening pr. land
             .then(response => response.json())
             .then(data => {
-                L.choropleth(data, {
-                    valueProperty: 'plasticPollution', // Attribut i JSON-data med værdierne
-                    scale: ['#ffffb2', '#b10026'], // Farveskala
-                    steps: 5, // Antal farvetrin
-                    mode: 'q', // Klassificeringsmetode (quantile)
-                    style: {
-                        color: '#fff', // Kanten farve
-                        weight: 1, // Kanten tykkelse
-                        fillOpacity: 0.7 // Gennemsigtighed af fill
+                L.geoJson(data, {
+                    style: function(feature) {
+                        return {
+                            fillColor: getColor(feature.properties.plasticPollution), // Farve baseret på plastforurening
+                            weight: 1,
+                            opacity: 1,
+                            color: 'white',
+                            dashArray: '3',
+                            fillOpacity: 0.7
+                        };
                     }
                 }).addTo(map);
             })
             .catch(error => console.error('Error fetching data:', error));
+
+        // Funktion til at vælge farve baseret på plastforurening
+        function getColor(plasticPollution) {
+            return plasticPollution > 1000 ? '#800026' :
+                   plasticPollution > 500  ? '#BD0026' :
+                   plasticPollution > 200  ? '#E31A1C' :
+                   plasticPollution > 100  ? '#FC4E2A' :
+                   plasticPollution > 50   ? '#FD8D3C' :
+                   plasticPollution > 20   ? '#FEB24C' :
+                   plasticPollution > 10   ? '#FED976' :
+                                              '#FFEDA0';
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,204 @@
+[
+{"Country":"India","Mwi":"98.55","Mwi_level":"Very High","Total_waste":"7408124","Skip_1":"7300752","Skip_2":"5.3","Skip_3":"59260","Skip_4":"98860","Skip_5":"330764","Skip_6":"44535"},
+{"Country":"China","Mwi":"17.41","Mwi_level":"Low","Total_waste":"37606230","Skip_1":"6546264","Skip_2":"26.7","Skip_3":"496480","Skip_4":"1273710","Skip_5":"517699","Skip_6":"39932"},
+{"Country":"United States","Mwi":"8.71","Mwi_level":"Very Low","Total_waste":"22867246","Skip_1":"1992144","Skip_2":"69","Skip_3":"380350","Skip_4":"264760","Skip_5":"254667","Skip_6":"12152"},
+{"Country":"Indonesia","Mwi":"98.42","Mwi_level":"Very High","Total_waste":"3366941","Skip_1":"3313742","Skip_2":"12.4","Skip_3":"26940","Skip_4":"79080","Skip_5":"80414","Skip_6":"20214"},
+{"Country":"Pakistan","Mwi":"91.53","Mwi_level":"Very High","Total_waste":"790123","Skip_1":"723213","Skip_2":"3.5","Skip_3":"6320","Skip_4":"4790","Skip_5":"58487","Skip_6":"4412"},
+{"Country":"Nigeria","Mwi":"99.44","Mwi_level":"Very High","Total_waste":"935848","Skip_1":"930624","Skip_2":"4.5","Skip_3":"7490","Skip_4":"960","Skip_5":"27685","Skip_6":"5677"},
+{"Country":"Brazil","Mwi":"97.97","Mwi_level":"Very High","Total_waste":"4911580","Skip_1":"4811936","Skip_2":"23","Skip_3":"39290","Skip_4":"1250","Skip_5":"53708","Skip_6":"29353"},
+{"Country":"Bangladesh","Mwi":"98.54","Mwi_level":"Very High","Total_waste":"579920","Skip_1":"571453","Skip_2":"3.5","Skip_3":"0","Skip_4":"2860","Skip_5":"47830","Skip_6":"3486"},
+{"Country":"Russia","Mwi":"97.82","Mwi_level":"Very High","Total_waste":"3164038","Skip_1":"3094976","Skip_2":"22","Skip_3":"25310","Skip_4":"12180","Skip_5":"47987","Skip_6":"18879"},
+{"Country":"Ethiopia","Mwi":"96.41","Mwi_level":"Very High","Total_waste":"150254","Skip_1":"144867","Skip_2":"1.3","Skip_3":"5260","Skip_4":"0","Skip_5":"13381","Skip_6":"884"},
+{"Country":"Mexico","Mwi":"67.24","Mwi_level":"High","Total_waste":"4049874","Skip_1":"2723104","Skip_2":"32.1","Skip_3":"200880","Skip_4":"26090","Skip_5":"36238","Skip_6":"16611"},
+{"Country":"Japan","Mwi":"10.87","Mwi_level":"Very Low","Total_waste":"3806805","Skip_1":"413770","Skip_2":"30.2","Skip_3":"675660","Skip_4":"2540","Skip_5":"172872","Skip_6":"2524"},
+{"Country":"Philippines","Mwi":"98.37","Mwi_level":"Very High","Total_waste":"938218","Skip_1":"922969","Skip_2":"8.4","Skip_3":"78540","Skip_4":"7950","Skip_5":"31807","Skip_6":"5630"},
+{"Country":"Egypt","Mwi":"89.37","Mwi_level":"Very High","Total_waste":"834699","Skip_1":"745985","Skip_2":"7.8","Skip_3":"70","Skip_4":"950","Skip_5":"31451","Skip_6":"4551"},
+{"Country":"DR Congo","Mwi":"97.75","Mwi_level":"Very High","Total_waste":"1144387","Skip_1":"1118640","Skip_2":"12.3","Skip_3":"30","Skip_4":"0","Skip_5":"10456","Skip_6":"6824"},
+{"Country":"Vietnam","Mwi":"32.01","Mwi_level":"Low","Total_waste":"2951900","Skip_1":"944959","Skip_2":"30.5","Skip_3":"131330","Skip_4":"713980","Skip_5":"27130","Skip_6":"5764"},
+{"Country":"Iran","Mwi":"84.41","Mwi_level":"Very High","Total_waste":"1305605","Skip_1":"1102093","Skip_2":"15","Skip_3":"0","Skip_4":"0","Skip_5":"19684","Skip_6":"6723"},
+{"Country":"Turkey","Mwi":"48.03","Mwi_level":"Medium","Total_waste":"938490","Skip_1":"450803","Skip_2":"11.2","Skip_3":"9580","Skip_4":"429770","Skip_5":"19827","Skip_6":"2750"},
+{"Country":"Germany","Mwi":"8.34","Mwi_level":"Very Low","Total_waste":"3568313","Skip_1":"297559","Skip_2":"42.9","Skip_3":"428860","Skip_4":"294020","Skip_5":"74309","Skip_6":"1815"},
+{"Country":"Thailand","Mwi":"98.49","Mwi_level":"Very High","Total_waste":"3355763","Skip_1":"3304945","Skip_2":"46.9","Skip_3":"132630","Skip_4":"179080","Skip_5":"26463","Skip_6":"20160"},
+{"Country":"Tanzania","Mwi":"99.61","Mwi_level":"Very High","Total_waste":"126931","Skip_1":"126432","Skip_2":"2.1","Skip_3":"3030","Skip_4":"200","Skip_5":"7298","Skip_6":"771"},
+{"Country":"United Kingdom","Mwi":"12.31","Mwi_level":"Very Low","Total_waste":"2085254","Skip_1":"256610","Skip_2":"31.1","Skip_3":"149230","Skip_4":"45720","Skip_5":"59546","Skip_6":"1565"},
+{"Country":"France","Mwi":"5.08","Mwi_level":"Very Low","Total_waste":"2680095","Skip_1":"136239","Skip_2":"39.7","Skip_3":"314320","Skip_4":"101040","Skip_5":"60757","Skip_6":"831"},
+{"Country":"South Africa","Mwi":"81.81","Mwi_level":"Very High","Total_waste":"1013303","Skip_1":"828949","Skip_2":"17.2","Skip_3":"8110","Skip_4":"5600","Skip_5":"12765","Skip_6":"5057"},
+{"Country":"Italy","Mwi":"22.03","Mwi_level":"Low","Total_waste":"3335851","Skip_1":"734733","Skip_2":"56.1","Skip_3":"156940","Skip_4":"141810","Skip_5":"55704","Skip_6":"4482"},
+{"Country":"Kenya","Mwi":"98.9","Mwi_level":"Very High","Total_waste":"270850","Skip_1":"267861","Skip_2":"5.2","Skip_3":"2170","Skip_4":"50","Skip_5":"7512","Skip_6":"1634"},
+{"Country":"Myanmar","Mwi":"99.18","Mwi_level":"Very High","Total_waste":"498431","Skip_1":"494335","Skip_2":"9.3","Skip_3":"6120","Skip_4":"30490","Skip_5":"14348","Skip_6":"3015"},
+{"Country":"Colombia","Mwi":"62.42","Mwi_level":"High","Total_waste":"769331","Skip_1":"480247","Skip_2":"15.1","Skip_3":"6150","Skip_4":"100","Skip_5":"12425","Skip_6":"2930"},
+{"Country":"Uganda","Mwi":"99.71","Mwi_level":"Very High","Total_waste":"59786","Skip_1":"59613","Skip_2":"1.3","Skip_3":"510","Skip_4":"30","Skip_5":"4758","Skip_6":"364"},
+{"Country":"Sudan","Mwi":"80.53","Mwi_level":"Very High","Total_waste":"359574","Skip_1":"289580","Skip_2":"8.1","Skip_3":"0","Skip_4":"0","Skip_5":"6722","Skip_6":"1766"},
+{"Country":"Spain","Mwi":"16.92","Mwi_level":"Low","Total_waste":"1580823","Skip_1":"267425","Skip_2":"33.4","Skip_3":"57160","Skip_4":"141750","Skip_5":"42735","Skip_6":"1631"},
+{"Country":"Iraq","Mwi":"98.35","Mwi_level":"Very High","Total_waste":"695106","Skip_1":"683664","Skip_2":"16.3","Skip_3":"0","Skip_4":"480","Skip_5":"8950","Skip_6":"4170"},
+{"Country":"Algeria","Mwi":"12.82","Mwi_level":"Very Low","Total_waste":"2092007","Skip_1":"268285","Skip_2":"48.1","Skip_3":"0","Skip_4":"0","Skip_5":"13747","Skip_6":"1637"},
+{"Country":"Argentina","Mwi":"40.77","Mwi_level":"Medium","Total_waste":"1236184","Skip_1":"503987","Skip_2":"27.2","Skip_3":"9890","Skip_4":"0","Skip_5":"23641","Skip_6":"3074"},
+{"Country":"Afghanistan","Mwi":"98.06","Mwi_level":"Very High","Total_waste":"447766","Skip_1":"439097","Skip_2":"11.5","Skip_3":"0","Skip_4":"850","Skip_5":"9101","Skip_6":"2678"},
+{"Country":"Poland","Mwi":"13.49","Mwi_level":"Very Low","Total_waste":"1315","Skip_1":"177365","Skip_2":"34.7","Skip_3":"130100","Skip_4":"214850","Skip_5":"35388","Skip_6":"1082"},
+{"Country":"Canada","Mwi":"2.57","Mwi_level":"Very Low","Total_waste":"2106603","Skip_1":"54061","Skip_2":"55.4","Skip_3":"386440","Skip_4":"426440","Skip_5":"29422","Skip_6":"330"},
+{"Country":"Morocco","Mwi":"74.41","Mwi_level":"High","Total_waste":"548160","Skip_1":"407884","Skip_2":"14.9","Skip_3":"4390","Skip_4":"2530","Skip_5":"5980","Skip_6":"2488"},
+{"Country":"Ukraine","Mwi":"59.39","Mwi_level":"Medium","Total_waste":"1066942","Skip_1":"633696","Skip_2":"24.2","Skip_3":"8540","Skip_4":"37140","Skip_5":"32866","Skip_6":"3866"},
+{"Country":"Angola","Mwi":"94.37","Mwi_level":"Very High","Total_waste":"568842","Skip_1":"536821","Skip_2":"17","Skip_3":"4550","Skip_4":"210","Skip_5":"8184","Skip_6":"3275"},
+{"Country":"Saudi Arabia","Mwi":"70.23","Mwi_level":"High","Total_waste":"2105362","Skip_1":"1478568","Skip_2":"58.5","Skip_3":"43530","Skip_4":"30","Skip_5":"26737","Skip_6":"9019"},
+{"Country":"Uzbekistan","Mwi":"98.23","Mwi_level":"Very High","Total_waste":"100000","Skip_1":"98225","Skip_2":"2.9","Skip_3":"800","Skip_4":"14400","Skip_5":"8212","Skip_6":"599"},
+{"Country":"Yemen","Mwi":"97.8","Mwi_level":"Very High","Total_waste":"384783","Skip_1":"376318","Skip_2":"11.9","Skip_3":"0","Skip_4":"0","Skip_5":"3581","Skip_6":"2296"},
+{"Country":"Mozambique","Mwi":"99.85","Mwi_level":"Very High","Total_waste":"105235","Skip_1":"105074","Skip_2":"3.4","Skip_3":"860","Skip_4":"640","Skip_5":"3671","Skip_6":"641"},
+{"Country":"Ghana","Mwi":"87.98","Mwi_level":"Very High","Total_waste":"141531","Skip_1":"124522","Skip_2":"4.4","Skip_3":"1130","Skip_4":"910","Skip_5":"4026","Skip_6":"760"},
+{"Country":"Peru","Mwi":"94.49","Mwi_level":"Very High","Total_waste":"597668","Skip_1":"564722","Skip_2":"17.9","Skip_3":"4780","Skip_4":"5230","Skip_5":"8251","Skip_6":"3445"},
+{"Country":"Malaysia","Mwi":"76.4","Mwi_level":"High","Total_waste":"1371397","Skip_1":"1047735","Skip_2":"41.3","Skip_3":"25650","Skip_4":"589970","Skip_5":"11789","Skip_6":"6391"},
+{"Country":"Nepal","Mwi":"93.84","Mwi_level":"Very High","Total_waste":"267823","Skip_1":"251325","Skip_2":"9.1","Skip_3":"2140","Skip_4":"0","Skip_5":"8995","Skip_6":"1533"},
+{"Country":"Madagascar","Mwi":"99.81","Mwi_level":"Very High","Total_waste":"299816","Skip_1":"299232","Skip_2":"10.6","Skip_3":"2400","Skip_4":"0","Skip_5":"3349","Skip_6":"1825"},
+{"Country":"Ivory Coast","Mwi":"97.95","Mwi_level":"Very High","Total_waste":"473230","Skip_1":"463511","Skip_2":"17.7","Skip_3":"3790","Skip_4":"3210","Skip_5":"7102","Skip_6":"2827"},
+{"Country":"Venezuela","Mwi":"53.21","Mwi_level":"Medium","Total_waste":"1200487","Skip_1":"638790","Skip_2":"42.1","Skip_3":"0","Skip_4":"0","Skip_5":"8029","Skip_6":"3897"},
+{"Country":"Cameroon","Mwi":"87.46","Mwi_level":"Very High","Total_waste":"107930","Skip_1":"94400","Skip_2":"4.1","Skip_3":"0","Skip_4":"30","Skip_5":"7425","Skip_6":"576"},
+{"Country":"Niger","Mwi":"98.24","Mwi_level":"Very High","Total_waste":"37313","Skip_1":"36656","Skip_2":"1.5","Skip_3":"0","Skip_4":"0","Skip_5":"1304","Skip_6":"224"},
+{"Country":"Australia","Mwi":"9.29","Mwi_level":"Very Low","Total_waste":"1160779","Skip_1":"107851","Skip_2":"45.2","Skip_3":"165690","Skip_4":"17020","Skip_5":"33117","Skip_6":"658"},
+{"Country":"Syria","Mwi":"94.59","Mwi_level":"Very High","Total_waste":"315000","Skip_1":"297944","Skip_2":"15.2","Skip_3":"0","Skip_4":"0","Skip_5":"2679","Skip_6":"1817"},
+{"Country":"Mali","Mwi":"97.11","Mwi_level":"Very High","Total_waste":"38747","Skip_1":"37626","Skip_2":"1.8","Skip_3":"2740","Skip_4":"60","Skip_5":"2133","Skip_6":"230"},
+{"Country":"Taiwan","Mwi":"4.49","Mwi_level":"Very Low","Total_waste":"1484073","Skip_1":"66635","Skip_2":"62","Skip_3":"0","Skip_4":"0","Skip_5":"32765","Skip_6":"406"},
+{"Country":"Burkina Faso","Mwi":"94.05","Mwi_level":"Very High","Total_waste":"231773","Skip_1":"217974","Skip_2":"10.8","Skip_3":"1850","Skip_4":"170","Skip_5":"4140","Skip_6":"1330"},
+{"Country":"Sri Lanka","Mwi":"92.09","Mwi_level":"Very High","Total_waste":"184216","Skip_1":"169645","Skip_2":"8.4","Skip_3":"1470","Skip_4":"0","Skip_5":"10369","Skip_6":"1035"},
+{"Country":"Malawi","Mwi":"97.23","Mwi_level":"Very High","Total_waste":"103247","Skip_1":"100392","Skip_2":"5.3","Skip_3":"830","Skip_4":"140","Skip_5":"2255","Skip_6":"612"},
+{"Country":"Zambia","Mwi":"94.01","Mwi_level":"Very High","Total_waste":"277947","Skip_1":"261284","Skip_2":"14.7","Skip_3":"2840","Skip_4":"50","Skip_5":"2630","Skip_6":"1594"},
+{"Country":"Kazakhstan","Mwi":"94.14","Mwi_level":"Very High","Total_waste":"1164935","Skip_1":"1096651","Skip_2":"62.1","Skip_3":"9320","Skip_4":"10","Skip_5":"58878","Skip_6":"6690"},
+{"Country":"Chile","Mwi":"35.19","Mwi_level":"Low","Total_waste":"609432","Skip_1":"214482","Skip_2":"31.6","Skip_3":"7600","Skip_4":"1060","Skip_5":"9716","Skip_6":"1308"},
+{"Country":"Romania","Mwi":"72.44","Mwi_level":"High","Total_waste":"510297","Skip_1":"369642","Skip_2":"26.5","Skip_3":"25550","Skip_4":"54920","Skip_5":"20757","Skip_6":"2255"},
+{"Country":"Chad","Mwi":"97.37","Mwi_level":"Very High","Total_waste":"81531","Skip_1":"79388","Skip_2":"4.9","Skip_3":"0","Skip_4":"0","Skip_5":"2976","Skip_6":"484"},
+{"Country":"Somalia","Mwi":"97.32","Mwi_level":"Very High","Total_waste":"185048","Skip_1":"180080","Skip_2":"11.2","Skip_3":"0","Skip_4":"0","Skip_5":"8280","Skip_6":"1098"},
+{"Country":"Ecuador","Mwi":"98.5","Mwi_level":"Very High","Total_waste":"251270","Skip_1":"247512","Skip_2":"14.3","Skip_3":"6400","Skip_4":"7600","Skip_5":"4630","Skip_6":"1510"},
+{"Country":"Guatemala","Mwi":"79.72","Mwi_level":"High","Total_waste":"476663","Skip_1":"379975","Skip_2":"28.3","Skip_3":"7380","Skip_4":"880","Skip_5":"4600","Skip_6":"2318"},
+{"Country":"Senegal","Mwi":"97.36","Mwi_level":"Very High","Total_waste":"220865","Skip_1":"215045","Skip_2":"13.4","Skip_3":"3700","Skip_4":"0","Skip_5":"1976","Skip_6":"1312"},
+{"Country":"Netherlands","Mwi":"4.71","Mwi_level":"Very Low","Total_waste":"989442","Skip_1":"46561","Skip_2":"56.7","Skip_3":"263060","Skip_4":"337750","Skip_5":"16391","Skip_6":"284"},
+{"Country":"Cambodia","Mwi":"91.89","Mwi_level":"Very High","Total_waste":"93654","Skip_1":"86055","Skip_2":"5.7","Skip_3":"8070","Skip_4":"0","Skip_5":"4829","Skip_6":"525"},
+{"Country":"Zimbabwe","Mwi":"88.78","Mwi_level":"Very High","Total_waste":"333443","Skip_1":"296016","Skip_2":"21.3","Skip_3":"2670","Skip_4":"330","Skip_5":"7912","Skip_6":"1806"},
+{"Country":"Guinea","Mwi":"97.61","Mwi_level":"Very High","Total_waste":"23876","Skip_1":"23307","Skip_2":"1.8","Skip_3":"0","Skip_4":"120","Skip_5":"1110","Skip_6":"142"},
+{"Country":"Rwanda","Mwi":"96.55","Mwi_level":"Very High","Total_waste":"348837","Skip_1":"336806","Skip_2":"26.5","Skip_3":"2790","Skip_4":"0","Skip_5":"1614","Skip_6":"2055"},
+{"Country":"Benin","Mwi":"89.21","Mwi_level":"Very Low","Total_waste":"50073","Skip_1":"44669","Skip_2":"4","Skip_3":"400","Skip_4":"80","Skip_5":"805","Skip_6":"272"},
+{"Country":"Burundi","Mwi":"97.24","Mwi_level":"Very High","Total_waste":"65521","Skip_1":"63712","Skip_2":"5.4","Skip_3":"520","Skip_4":"0","Skip_5":"960","Skip_6":"389"},
+{"Country":"Bolivia","Mwi":"73.04","Mwi_level":"High","Total_waste":"226189","Skip_1":"165214","Skip_2":"18.9","Skip_3":"1810","Skip_4":"0","Skip_5":"2225","Skip_6":"1008"},
+{"Country":"Tunisia","Mwi":"79.47","Mwi_level":"High","Total_waste":"179885","Skip_1":"142947","Skip_2":"14.8","Skip_3":"14390","Skip_4":"0","Skip_5":"97492","Skip_6":"872"},
+{"Country":"Haiti","Mwi":"99.61","Mwi_level":"Very High","Total_waste":"126931","Skip_1":"126432","Skip_2":"2.1","Skip_3":"3030","Skip_4":"200","Skip_5":"7298","Skip_6":"771"},
+{"Country":"Belgium","Mwi":"5.72","Mwi_level":"Very Low","Total_waste":"656295","Skip_1":"37561","Skip_2":"56.9","Skip_3":"297950","Skip_4":"148570","Skip_5":"11168","Skip_6":"229"},
+{"Country":"Dominican Republic","Mwi":"89.16","Mwi_level":"Very High","Total_waste":"406391","Skip_1":"362330","Skip_2":"49.3","Skip_3":"0","Skip_4":"0","Skip_5":"13338","Skip_6":"2210"},
+{"Country":"Jordan","Mwi":"61.64","Mwi_level":"High","Total_waste":"404800","Skip_1":"249536","Skip_2":"37","Skip_3":"3240","Skip_4":"0","Skip_5":"2442","Skip_6":"1522"},
+{"Country":"South Sudan","Mwi":"97.34","Mwi_level":"Very High","Total_waste":"213256","Skip_1":"207574","Skip_2":"20.1","Skip_3":"0","Skip_4":"730","Skip_5":"1461","Skip_6":"1266"},
+{"Country":"Cuba","Mwi":"73.81","Mwi_level":"High","Total_waste":"258498","Skip_1":"190805","Skip_2":"22.9","Skip_3":"0","Skip_4":"0","Skip_5":"3381","Skip_6":"1164"},
+{"Country":"Honduras","Mwi":"71.88","Mwi_level":"High","Total_waste":"311548","Skip_1":"223939","Skip_2":"30.8","Skip_3":"2490","Skip_4":"19880","Skip_5":"1903","Skip_6":"1366"},
+{"Country":"Sweden","Mwi":"1.49","Mwi_level":"Very Low","Total_waste":"288007","Skip_1":"4304","Skip_2":"27.8","Skip_3":"86120","Skip_4":"15640","Skip_5":"9838","Skip_6":"26"},
+{"Country":"Papua New Guinea","Mwi":"80.58","Mwi_level":"Very High","Total_waste":"100000","Skip_1":"80583","Skip_2":"10.3","Skip_3":"0","Skip_4":"0","Skip_5":"12813","Skip_6":"492"},
+{"Country":"Czech Republic","Mwi":"1.89","Mwi_level":"Very Low","Total_waste":"475180","Skip_1":"8996","Skip_2":"44.4","Skip_3":"643420","Skip_4":"675870","Skip_5":"10538","Skip_6":"55"},
+{"Country":"Azerbaijan","Mwi":"98.01","Mwi_level":"Very High","Total_waste":"230619","Skip_1":"226034","Skip_2":"22.8","Skip_3":"1840","Skip_4":"3910","Skip_5":"3530","Skip_6":"1379"},
+{"Country":"Tajikistan","Mwi":"99.25","Mwi_level":"Very High","Total_waste":"142193","Skip_1":"141129","Skip_2":"14.9","Skip_3":"0","Skip_4":"930","Skip_5":"1743","Skip_6":"861"},
+{"Country":"Greece","Mwi":"58.76","Mwi_level":"Medium","Total_waste":"350828","Skip_1":"206141","Skip_2":"32.8","Skip_3":"22670","Skip_4":"3200","Skip_5":"11928","Skip_6":"1257"},
+{"Country":"Portugal","Mwi":"12.09","Mwi_level":"Very Low","Total_waste":"344912","Skip_1":"41687","Skip_2":"33.5","Skip_3":"32470","Skip_4":"4340","Skip_5":"10450","Skip_6":"254"},
+{"Country":"Hungary","Mwi":"1.32","Mwi_level":"Very Low","Total_waste":"482560","Skip_1":"6381","Skip_2":"49.5","Skip_3":"21980","Skip_4":"15510","Skip_5":"11990","Skip_6":"39"},
+{"Country":"United Arab Emirates","Mwi":"90.94","Mwi_level":"Very High","Total_waste":"1079752","Skip_1":"981877","Skip_2":"116.3","Skip_3":"13250","Skip_4":"9300","Skip_5":"9300","Skip_6":"5989"},
+{"Country":"Belarus","Mwi":"30.33","Mwi_level":"Low","Total_waste":"513600","Skip_1":"155786","Skip_2":"54.8","Skip_3":"20260","Skip_4":"10890","Skip_5":"6295","Skip_6":"950"},
+{"Country":"Israel","Mwi":"4.12","Mwi_level":"Very Low","Total_waste":"972000","Skip_1":"40010","Skip_2":"105.5","Skip_3":"15320","Skip_4":"480","Skip_5":"8582","Skip_6":"244"},
+{"Country":"Togo","Mwi":"98.69","Mwi_level":"Very High","Total_waste":"110903","Skip_1":"109451","Skip_2":"13.1","Skip_3":"890","Skip_4":"0","Skip_5":"994","Skip_6":"668"},
+{"Country":"Sierra Leone","Mwi":"97.17","Mwi_level":"Very High","Total_waste":"48545","Skip_1":"47169","Skip_2":"5.9","Skip_3":"0","Skip_4":"0","Skip_5":"773","Skip_6":"288"},
+{"Country":"Austria","Mwi":"4.12","Mwi_level":"Very Low","Total_waste":"408397","Skip_1":"16836","Skip_2":"45.8","Skip_3":"129820","Skip_4":"98810","Skip_5":"8796","Skip_6":"103"},
+{"Country":"Switzerland","Mwi":"8.91","Mwi_level":"Very Low","Total_waste":"312482","Skip_1":"27853","Skip_2":"36.2","Skip_3":"30160","Skip_4":"5070","Skip_5":"8550","Skip_6":"170"},
+{"Country":"Laos","Mwi":"79.74","Mwi_level":"High","Total_waste":"21466","Skip_1":"17116","Skip_2":"2.9","Skip_3":"2200","Skip_4":"1710","Skip_5":"2197","Skip_6":"104"},
+{"Country":"Hong Kong","Mwi":"0.91","Mwi_level":"Very Low","Total_waste":"1249560","Skip_1":"11410","Skip_2":"167","Skip_3":"0","Skip_4":"0","Skip_5":"11017","Skip_6":"70"},
+{"Country":"Nicaragua","Mwi":"87.12","Mwi_level":"Very High","Total_waste":"162916","Skip_1":"141932","Skip_2":"24.1","Skip_3":"11240","Skip_4":"1010","Skip_5":"1244","Skip_6":"866"},
+{"Country":"Serbia","Mwi":"54.42","Mwi_level":"Medium","Total_waste":"234232","Skip_1":"127460","Skip_2":"34","Skip_3":"9940","Skip_4":"18700","Skip_5":"8447","Skip_6":"778"},
+{"Country":"Libya","Mwi":"55.21","Mwi_level":"Medium","Total_waste":"161070","Skip_1":"88928","Skip_2":"24.2","Skip_3":"0","Skip_4":"0","Skip_5":"3396","Skip_6":"542"},
+{"Country":"Paraguay","Mwi":"67.64","Mwi_level":"High","Total_waste":"223240","Skip_1":"151008","Skip_2":"33.7","Skip_3":"1790","Skip_4":"1540","Skip_5":"2163","Skip_6":"921"},
+{"Country":"Kyrgyzstan","Mwi":"98.47","Mwi_level":"Very High","Total_waste":"118637","Skip_1":"116817","Skip_2":"18","Skip_3":"1690","Skip_4":"0","Skip_5":"1974","Skip_6":"713"},
+{"Country":"Bulgaria","Mwi":"54.77","Mwi_level":"Medium","Total_waste":"194447","Skip_1":"106504","Skip_2":"28","Skip_3":"5910","Skip_4":"24320","Skip_5":"2763","Skip_6":"650"},
+{"Country":"Turkmenistan","Mwi":"41.28","Mwi_level":"Medium","Total_waste":"10950","Skip_1":"4520","Skip_2":"1.8","Skip_3":"0","Skip_4":"0","Skip_5":"2169","Skip_6":"28"},
+{"Country":"El Salvador","Mwi":"38.68","Mwi_level":"Low","Total_waste":"164900","Skip_1":"63784","Skip_2":"26.2","Skip_3":"10310","Skip_4":"2200","Skip_5":"1338","Skip_6":"389"},
+{"Country":"Republic of the Congo","Mwi":"87.79","Mwi_level":"Very High","Total_waste":"48082","Skip_1":"42210","Skip_2":"8.4","Skip_3":"0","Skip_4":"0","Skip_5":"655","Skip_6":"257"},
+{"Country":"Singapore","Mwi":"4.97","Mwi_level":"Very Low","Total_waste":"593875","Skip_1":"29525","Skip_2":"104.4","Skip_3":"24450","Skip_4":"3150","Skip_5":"8600","Skip_6":"180"},
+{"Country":"Denmark","Mwi":"1.56","Mwi_level":"Very Low","Total_waste":"228345","Skip_1":"3552","Skip_2":"39.2","Skip_3":"184560","Skip_4":"14960","Skip_5":"13786","Skip_6":"22"},
+{"Country":"Central African Republic","Mwi":"97.3","Mwi_level":"Very High","Total_waste":"87984","Skip_1":"85606","Skip_2":"16.5","Skip_3":"0","Skip_4":"0","Skip_5":"603","Skip_6":"592"},
+{"Country":"Slovakia","Mwi":"9.9","Mwi_level":"Very Low","Total_waste":"196240","Skip_1":"19426","Skip_2":"35.9","Skip_3":"44430","Skip_4":"31010","Skip_5":"5944","Skip_6":"118"},
+{"Country":"Finland","Mwi":"1.4","Mwi_level":"Very Low","Total_waste":"205063","Skip_1":"2863","Skip_2":"37.1","Skip_3":"70360","Skip_4":"15420","Skip_5":"5963","Skip_6":"17"},
+{"Country":"Liberia","Mwi":"97.09","Mwi_level":"Very High","Total_waste":"44905","Skip_1":"43599","Skip_2":"8.8","Skip_3":"0","Skip_4":"0","Skip_5":"578","Skip_6":"266"},
+{"Country":"Norway","Mwi":"1.75","Mwi_level":"Very Low","Total_waste":"289000","Skip_1":"5068","Skip_2":"53.7","Skip_3":"62780","Skip_4":"6990","Skip_5":"5727","Skip_6":"31"},
+{"Country":"New Zealand","Mwi":"10.45","Mwi_level":"Very Low","Total_waste":"154091","Skip_1":"16103","Skip_2":"30.3","Skip_3":"20960","Skip_4":"340","Skip_5":"7390","Skip_6":"98"},
+{"Country":"Costa Rica","Mwi":"21.53","Mwi_level":"Low","Total_waste":"160600","Skip_1":"34582","Skip_2":"31.3","Skip_3":"22730","Skip_4":"970","Skip_5":"1696","Skip_6":"211"},
+{"Country":"Lebanon","Mwi":"48.26","Mwi_level":"Medium","Total_waste":"234600","Skip_1":"113228","Skip_2":"41.4","Skip_3":"8350","Skip_4":"370","Skip_5":"1798","Skip_6":"691"},
+{"Country":"Ireland","Mwi":"8.31","Mwi_level":"Very Low","Total_waste":"333875","Skip_1":"27734","Skip_2":"67","Skip_3":"41380","Skip_4":"65800","Skip_5":"5760","Skip_6":"169"},
+{"Country":"Mauritania","Mwi":"94.75","Mwi_level":"Very High","Total_waste":"90800","Skip_1":"86032","Skip_2":"20.2","Skip_3":"0","Skip_4":"0","Skip_5":"764","Skip_6":"525"},
+{"Country":"Oman","Mwi":"97.82","Mwi_level":"Very High","Total_waste":"364326","Skip_1":"356375","Skip_2":"80.2","Skip_3":"0","Skip_4":"0","Skip_5":"4249","Skip_6":"2174"},
+{"Country":"Panama","Mwi":"91.56","Mwi_level":"Very High","Total_waste":"85364","Skip_1":"78158","Skip_2":"19.9","Skip_3":"0","Skip_4":"0","Skip_5":"3133","Skip_6":"477"},
+{"Country":"Kuwait","Mwi":"93.66","Mwi_level":"Very High","Total_waste":"350000","Skip_1":"327798","Skip_2":"80.3","Skip_3":"9380","Skip_4":"0","Skip_5":"3467","Skip_6":"2000"},
+{"Country":"Croatia","Mwi":"22.3","Mwi_level":"Low","Total_waste":"100078","Skip_1":"22314","Skip_2":"24.7","Skip_3":"8680","Skip_4":"3580","Skip_5":"4875","Skip_6":"136"},
+{"Country":"Eritrea","Mwi":"97.34","Mwi_level":"Very High","Total_waste":"57832","Skip_1":"56291","Skip_2":"16.3","Skip_3":"0","Skip_4":"0","Skip_5":"31383","Skip_6":"343"},
+{"Country":"Georgia","Mwi":"80.27","Mwi_level":"Very High","Total_waste":"24000","Skip_1":"19265","Skip_2":"6.4","Skip_3":"1210","Skip_4":"10","Skip_5":"1110","Skip_6":"118"},
+{"Country":"Mongolia","Mwi":"98.47","Mwi_level":"Very High","Total_waste":"420500","Skip_1":"414064","Skip_2":"127.6","Skip_3":"3360","Skip_4":"0","Skip_5":"8434","Skip_6":"2526"},
+{"Country":"Uruguay","Mwi":"96.08","Mwi_level":"Very High","Total_waste":"123346","Skip_1":"118506","Skip_2":"36","Skip_3":"990","Skip_4":"310","Skip_5":"3095","Skip_6":"723"},
+{"Country":"Moldova","Mwi":"89.82","Mwi_level":"Very High","Total_waste":"398120","Skip_1":"357604","Skip_2":"151.1","Skip_3":"3180","Skip_4":"0","Skip_5":"1055","Skip_6":"2181"},
+{"Country":"Puerto Rico","Mwi":"22.89","Mwi_level":"Low","Total_waste":"433779","Skip_1":"99289","Skip_2":"132.2","Skip_3":"0","Skip_4":"0","Skip_5":"2839","Skip_6":"606"},
+{"Country":"Bosnia and Herzegovina","Mwi":"72.42","Mwi_level":"High","Total_waste":"153293","Skip_1":"111019","Skip_2":"46.2","Skip_3":"6560","Skip_4":"0","Skip_5":"14249","Skip_6":"677"},
+{"Country":"Gambia","Mwi":"97.27","Mwi_level":"Very High","Total_waste":"18764","Skip_1":"18252","Skip_2":"7.3","Skip_3":"0","Skip_4":"0","Skip_5":"186","Skip_6":"111"},
+{"Country":"Albania","Mwi":"69.9","Mwi_level":"High","Total_waste":"109725","Skip_1":"76692","Skip_2":"38.7","Skip_3":"0","Skip_4":"0","Skip_5":"1431","Skip_6":"468"},
+{"Country":"Jamaica","Mwi":"98.18","Mwi_level":"Very High","Total_waste":"50262","Skip_1":"49348","Skip_2":"17.8","Skip_3":"4160","Skip_4":"0","Skip_5":"1204","Skip_6":"301"},
+{"Country":"Armenia","Mwi":"97.76","Mwi_level":"Very High","Total_waste":"56179","Skip_1":"54918","Skip_2":"20","Skip_3":"450","Skip_4":"130","Skip_5":"1433","Skip_6":"335"},
+{"Country":"Qatar","Mwi":"77.34","Mwi_level":"High","Total_waste":"166011","Skip_1":"128401","Skip_2":"60.1","Skip_3":"0","Skip_4":"0","Skip_5":"3399","Skip_6":"783"},
+{"Country":"Botswana","Mwi":"94.86","Mwi_level":"Very High","Total_waste":"25885","Skip_1":"24553","Skip_2":"10.2","Skip_3":"260","Skip_4":"110","Skip_5":"1175","Skip_6":"150"},
+{"Country":"Lithuania","Mwi":"6.26","Mwi_level":"Very Low","Total_waste":"131950","Skip_1":"8254","Skip_2":"47.2","Skip_3":"32900","Skip_4":"37910","Skip_5":"3667","Skip_6":"50"},
+{"Country":"Namibia","Mwi":"95.57","Mwi_level":"Very High","Total_waste":"31516","Skip_1":"30120","Skip_2":"12.7","Skip_3":"250","Skip_4":"170","Skip_5":"21653","Skip_6":"184"},
+{"Country":"Gabon","Mwi":"88.1","Mwi_level":"Very High","Total_waste":"29230","Skip_1":"25752","Skip_2":"12.7","Skip_3":"0","Skip_4":"0","Skip_5":"8358","Skip_6":"157"},
+{"Country":"Lesotho","Mwi":"95.18","Mwi_level":"Very High","Total_waste":"7828","Skip_1":"7450","Skip_2":"3.5","Skip_3":"0","Skip_4":"0","Skip_5":"1473","Skip_6":"45"},
+{"Country":"Guinea-Bissau","Mwi":"97.28","Mwi_level":"Very High","Total_waste":"23032","Skip_1":"22406","Skip_2":"11.4","Skip_3":"0","Skip_4":"0","Skip_5":"241","Skip_6":"137"},
+{"Country":"Slovenia","Mwi":"6.34","Mwi_level":"Very Low","Total_waste":"83171","Skip_1":"5270","Skip_2":"39.6","Skip_3":"72050","Skip_4":"61620","Skip_5":"4006","Skip_6":"32"},
+{"Country":"North Macedonia","Mwi":"41.52","Mwi_level":"Medium","Total_waste":"97789","Skip_1":"40603","Skip_2":"47.2","Skip_3":"7820","Skip_4":"590","Skip_5":"14812","Skip_6":"248"},
+{"Country":"Latvia","Mwi":"24.04","Mwi_level":"Low","Total_waste":"65989","Skip_1":"15865","Skip_2":"34.7","Skip_3":"14720","Skip_4":"36480","Skip_5":"14012","Skip_6":"97"},
+{"Country":"Equatorial Guinea","Mwi":"64.53","Mwi_level":"High","Total_waste":"24361","Skip_1":"15719","Skip_2":"15.3","Skip_3":"0","Skip_4":"0","Skip_5":"745","Skip_6":"96"},
+{"Country":"Trinidad and Tobago","Mwi":"87.9","Mwi_level":"Very High","Total_waste":"139533","Skip_1":"122655","Skip_2":"91.9","Skip_3":"0","Skip_4":"0","Skip_5":"1752","Skip_6":"748"},
+{"Country":"Bahrain","Mwi":"4.63","Mwi_level":"Very Low","Total_waste":"70444","Skip_1":"3261","Skip_2":"47.7","Skip_3":"710","Skip_4":"0","Skip_5":"2198","Skip_6":"20"},
+{"Country":"Timor-Leste","Mwi":"88.3","Mwi_level":"Very High","Total_waste":"10539","Skip_1":"9306","Skip_2":"8.1","Skip_3":"0","Skip_4":"0","Skip_5":"563","Skip_6":"17"},
+{"Country":"Estonia","Mwi":"28.33","Mwi_level":"Low","Total_waste":"34413","Skip_1":"9749","Skip_2":"25.9","Skip_3":"6350","Skip_4":"1370","Skip_5":"4969","Skip_6":"59"},
+{"Country":"Mauritius","Mwi":"15.47","Mwi_level":"Low","Total_waste":"54312","Skip_1":"8402","Skip_2":"42.9","Skip_3":"1800","Skip_4":"0","Skip_5":"759","Skip_6":"51"},
+{"Country":"Cyprus","Mwi":"19.11","Mwi_level":"Low","Total_waste":"43771","Skip_1":"8364","Skip_2":"35.4","Skip_3":"4580","Skip_4":"1020","Skip_5":"2103","Skip_6":"51"},
+{"Country":"Eswatini","Mwi":"84.21","Mwi_level":"Very High","Total_waste":"23252","Skip_1":"19580","Skip_2":"19.7","Skip_3":"930","Skip_4":"60","Skip_5":"435","Skip_6":"119"},
+{"Country":"Djibouti","Mwi":"88.2","Mwi_level":"Very High","Total_waste":"2255","Skip_1":"10809","Skip_2":"11.2","Skip_3":"0","Skip_4":"0","Skip_5":"805","Skip_6":"66"},
+{"Country":"Fiji","Mwi":"60.56","Mwi_level":"High","Total_waste":"14204","Skip_1":"8602","Skip_2":"15.4","Skip_3":"1170","Skip_4":"0","Skip_5":"21710","Skip_6":"52"},
+{"Country":"Comoros","Mwi":"97.06","Mwi_level":"Very High","Total_waste":"4551","Skip_1":"4417","Skip_2":"5.6","Skip_3":"0","Skip_4":"0","Skip_5":"136","Skip_6":"27"},
+{"Country":"Guyana","Mwi":"25.57","Mwi_level":"Low","Total_waste":"25454","Skip_1":"6508","Skip_2":"31.9","Skip_3":"0","Skip_4":"0","Skip_5":"655","Skip_6":"40"},
+{"Country":"Bhutan","Mwi":"80.32","Mwi_level":"Very High","Total_waste":"14471","Skip_1":"11623","Skip_2":"18.7","Skip_3":"0","Skip_4":"170","Skip_5":"373","Skip_6":"71"},
+{"Country":"Solomon Islands","Mwi":"100","Mwi_level":"Very High","Total_waste":"40224","Skip_1":"40224","Skip_2":"58.2","Skip_3":"0","Skip_4":"0","Skip_5":"337","Skip_6":"245"},
+{"Country":"Macau","Mwi":"67.09","Mwi_level":"High","Total_waste":"221852","Skip_1":"148850","Skip_2":"328","Skip_3":"0","Skip_4":"0","Skip_5":"1884","Skip_6":"908"},
+{"Country":"Luxembourg","Mwi":"0.12","Mwi_level":"Very Low","Total_waste":"64080","Skip_1":"74","Skip_2":"101.6","Skip_3":"10470","Skip_4":"1140","Skip_5":"1560","Skip_6":"0"},
+{"Country":"Suriname","Mwi":"100","Mwi_level":"Very High","Total_waste":"8648","Skip_1":"8648","Skip_2":"14.2","Skip_3":"0","Skip_4":"0","Skip_5":"590","Skip_6":"53"},
+{"Country":"Montenegro","Mwi":"89.95","Mwi_level":"Very High","Total_waste":"61154","Skip_1":"55011","Skip_2":"98.4","Skip_3":"490","Skip_4":"300","Skip_5":"655","Skip_6":"336"},
+{"Country":"Cape Verde","Mwi":"82.54","Mwi_level":"Very High","Total_waste":"14126","Skip_1":"11659","Skip_2":"24.2","Skip_3":"0","Skip_4":"0","Skip_5":"252","Skip_6":"71"},
+{"Country":"Malta","Mwi":"7.07","Mwi_level":"Very Low","Total_waste":"32280","Skip_1":"2284","Skip_2":"62.6","Skip_3":"2170","Skip_4":"0","Skip_5":"1712","Skip_6":"14"},
+{"Country":"Maldives","Mwi":"81.09","Mwi_level":"Very High","Total_waste":"6345","Skip_1":"5145","Skip_2":"12.3","Skip_3":"240","Skip_4":"0","Skip_5":"672","Skip_6":"31"},
+{"Country":"Brunei","Mwi":"32.42","Mwi_level":"Low","Total_waste":"34601","Skip_1":"11216","Skip_2":"78.3","Skip_3":"400","Skip_4":"0","Skip_5":"1624","Skip_6":"68"},
+{"Country":"Belize","Mwi":"66.81","Mwi_level":"High","Total_waste":"19262","Skip_1":"12868","Skip_2":"48.8","Skip_3":"530","Skip_4":"0","Skip_5":"547","Skip_6":"78"},
+{"Country":"Bahamas","Mwi":"17.02","Mwi_level":"Low","Total_waste":"39600","Skip_1":"6738","Skip_2":"97.4","Skip_3":"0","Skip_4":"0","Skip_5":"1253","Skip_6":"41"},
+{"Country":"Iceland","Mwi":"0.97","Mwi_level":"Very Low","Total_waste":"47250","Skip_1":"459","Skip_2":"128.9","Skip_3":"7650","Skip_4":"0","Skip_5":"1347","Skip_6":"3"},
+{"Country":"Vanuatu","Mwi":"95.82","Mwi_level":"Very High","Total_waste":"4530","Skip_1":"4340","Skip_2":"14.5","Skip_3":"0","Skip_4":"0","Skip_5":"245","Skip_6":"26"},
+{"Country":"French Polynesia","Mwi":"74.35","Mwi_level":"High","Total_waste":"2940","Skip_1":"2186","Skip_2":"9.7","Skip_3":"400","Skip_4":"0","Skip_5":"10599","Skip_6":"13"},
+{"Country":"New Caledonia","Mwi":"44.74","Mwi_level":"Medium","Total_waste":"17846","Skip_1":"7984","Skip_2":"65.8","Skip_3":"0","Skip_4":"0","Skip_5":"1426","Skip_6":"49"},
+{"Country":"Barbados","Mwi":"10.64","Mwi_level":"Very Low","Total_waste":"29893","Skip_1":"3180","Skip_2":"106.5","Skip_3":"1000","Skip_4":"0","Skip_5":"1198","Skip_6":"19"},
+{"Country":"Sao Tome and Principe","Mwi":"88.35","Mwi_level":"Very High","Total_waste":"2727","Skip_1":"2 409","Skip_2":"12.5","Skip_3":"0","Skip_4":"0","Skip_5":"196","Skip_6":"15"},
+{"Country":"Samoa","Mwi":"41.53","Mwi_level":"Medium","Total_waste":"3562","Skip_1":"1479","Skip_2":"16.6","Skip_3":"0","Skip_4":"0","Skip_5":"524","Skip_6":"9"},
+{"Country":"Saint Lucia","Mwi":"26.09","Mwi_level":"Low","Total_waste":"17076","Skip_1":"4454","Skip_2":"95.3","Skip_3":"0","Skip_4":"0","Skip_5":"501","Skip_6":"27"},
+{"Country":"Guam","Mwi":"18.11","Mwi_level":"Low","Total_waste":"17546","Skip_1":"3177","Skip_2":"103.7","Skip_3":"0","Skip_4":"0","Skip_5":"1695","Skip_6":"19"},
+{"Country":"Kiribati","Mwi":"87.26","Mwi_level":"Very High","Total_waste":"5894","Skip_1":"5143","Skip_2":"46.6","Skip_3":"0","Skip_4":"0","Skip_5":"282","Skip_6":"31"},
+{"Country":"Micronesia","Mwi":"98.74","Mwi_level":"Very High","Total_waste":"3463","Skip_1":"3420","Skip_2":"30.9","Skip_3":"0","Skip_4":"0","Skip_5":"195","Skip_6":"21"},
+{"Country":"Tonga","Mwi":"79.33","Mwi_level":"High","Total_waste":"2310","Skip_1":"1833","Skip_2":"21.9","Skip_3":"0","Skip_4":"0","Skip_5":"493","Skip_6":"11"},
+{"Country":"Seychelles","Mwi":"19.64","Mwi_level":"Low","Total_waste":"4752","Skip_1":"933","Skip_2":"48.3","Skip_3":"0","Skip_4":"0","Skip_5":"1121","Skip_6":"6"},
+{"Country":"Saint Vincent and the Grenadines","Mwi":"30.18","Mwi_level":"Low","Total_waste":"2651","Skip_1":"800","Skip_2":"25.3","Skip_3":"0","Skip_4":"0","Skip_5":"8901","Skip_6":"5"},
+{"Country":"Antigua and Barbuda","Mwi":"2.55","Mwi_level":"Very Low","Total_waste":"3976","Skip_1":"101","Skip_2":"42.9","Skip_3":"0","Skip_4":"0","Skip_5":"1121","Skip_6":"1"},
+{"Country":"Andorra","Mwi":"44.77","Mwi_level":"Medium","Total_waste":"4859","Skip_1":"2176","Skip_2":"62.5","Skip_3":"0","Skip_4":"0","Skip_5":"1123","Skip_6":"13"},
+{"Country":"Dominica","Mwi":"22.59","Mwi_level":"Low","Total_waste":"2108","Skip_1":"476","Skip_2":"29.3","Skip_3":"13140","Skip_4":"0","Skip_5":"473","Skip_6":"3"},
+{"Country":"Cayman Islands","Mwi":"67.95","Mwi_level":"High","Total_waste":"6600","Skip_1":"4484","Skip_2":"98.1","Skip_3":"0","Skip_4":"0","Skip_5":"2683","Skip_6":"27"},
+{"Country":"Bermuda","Mwi":"0.13","Mwi_level":"Very Low","Total_waste":"10660","Skip_1":"14","Skip_2":"166.8","Skip_3":"0","Skip_4":"0","Skip_5":"1101","Skip_6":"0"},
+{"Country":"Greenland","Mwi":"4.49","Mwi_level":"Very Low","Total_waste":"1200","Skip_1":"54","Skip_2":"21.3","Skip_3":"0","Skip_4":"0","Skip_5":"1095","Skip_6":"0"},
+{"Country":"Faroe Islands","Mwi":"36.01","Mwi_level":"Low","Total_waste":"8137","Skip_1":"2930","Skip_2":"155.2","Skip_3":"0","Skip_4":"0","Skip_5":"1093","Skip_6":"18"},
+{"Country":"Saint Kitts and Nevis","Mwi":"5.03","Mwi_level":"Very Low","Total_waste":"7631","Skip_1":"384","Skip_2":"160.2","Skip_3":"0","Skip_4":"0","Skip_5":"1077","Skip_6":"2"},
+{"Country":"Sint Maarten","Mwi":"21.23","Mwi_level":"Low","Total_waste":"2065","Skip_1":"438","Skip_2":"63.4","Skip_3":"0","Skip_4":"0","Skip_5":"1092","Skip_6":"3"},
+{"Country":"American Samoa","Mwi":"53.03","Mwi_level":"Medium","Total_waste":"2431","Skip_1":"1289","Skip_2":"52.6","Skip_3":"0","Skip_4":"0","Skip_5":"482","Skip_6":"8"},
+{"Country":"Marshall Islands","Mwi":"83","Mwi_level":"Very High","Total_waste":"1120","Skip_1":"930","Skip_2":"25.8","Skip_3":"0","Skip_4":"0","Skip_5":"4176","Skip_6":"6"},
+{"Country":"Liechtenstein","Mwi":"35.4","Mwi_level":"Low","Total_waste":"1749","Skip_1":"619","Skip_2":"45.1","Skip_3":"0","Skip_4":"0","Skip_5":"1082","Skip_6":"4"},
+{"Country":"San Marino","Mwi":"56.97","Mwi_level":"Medium","Total_waste":"962","Skip_1":"548","Skip_2":"28.3","Skip_3":"0","Skip_4":"0","Skip_5":"1079","Skip_6":"3"},
+{"Country":"Gibraltar","Mwi":"21.23","Mwi_level":"Low","Total_waste":"2689","Skip_1":"571","Skip_2":"82.2","Skip_3":"0","Skip_4":"0","Skip_5":"1079","Skip_6":"3"},
+{"Country":"British Virgin Islands","Mwi":"21.95","Mwi_level":"Low","Total_waste":"1329","Skip_1":"292","Skip_2":"43","Skip_3":"0","Skip_4":"0","Skip_5":"1060","Skip_6":"2"},
+{"Country":"Palau","Mwi":"39.08","Mwi_level":"Low","Total_waste":"3017","Skip_1":"1179","Skip_2":"167.8","Skip_3":"0","Skip_4":"0","Skip_5":"3210","Skip_6":"7"}
+]
