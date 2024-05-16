@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Søjlediagram</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Tilpas baggrundsfarve */
+        body {
+            background-color: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Tilpas skriftstørrelsen på titlen */
+        h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Tilpas skriftstørrelsen på akseetiketterne */
+        .chartjs-chart {
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
+    <h2>Plastforurening pr. land</h2>
     <canvas id="myChart"></canvas>
-    <div id="test"></div>
 
     <script>
         // Læs data fra CSV-filen
@@ -32,16 +51,19 @@
                     data: {
                         labels: labels,
                         datasets: [{
-                            label: 'Plastic Pollution',
+                            label: 'Plastforurening',
                             data: values,
-                            backgroundColor: 'blue', // Farven på søjlerne
+                            backgroundColor: '#007bff', // Blå farve for alle søjler
                             borderWidth: 1
                         }]
                     },
                     options: {
                         scales: {
                             y: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1000 // Skalér akseetiketterne
+                                }
                             }
                         }
                     }
