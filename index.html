@@ -23,8 +23,10 @@
         fetch('output.geojson') // GeoJSON-fil med plastforurening pr. land
             .then(response => response.json())
             .then(data => {
+                console.log('GeoJSON-data:', data); // Udskriv dataene fra GeoJSON-filen til konsollen
                 L.geoJson(data, {
                     style: function(feature) {
+                        console.log('Feature egenskaber:', feature.properties); // Udskriv egenskaberne for hvert feature til konsollen
                         return {
                             fillColor: getColor(feature.properties.plasticPollution), // Farve baseret på plastforurening
                             weight: 1,
@@ -40,6 +42,7 @@
 
         // Funktion til at vælge farve baseret på plastforurening
         function getColor(plasticPollution) {
+            console.log('Plastic pollution value:', plasticPollution); // Udskriv værdien af plastforurening til konsollen
             return plasticPollution > 1000 ? '#800026' :
                    plasticPollution > 500  ? '#BD0026' :
                    plasticPollution > 200  ? '#E31A1C' :
