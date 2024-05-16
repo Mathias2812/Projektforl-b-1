@@ -3,52 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Tilføj Chart.js fra CDN -->
+    <title>Kurvediagram</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <canvas id="myChart"></canvas>
     <div id="test"></div>
-    <canvas id="myChart" width="400" height="200"></canvas>
-    
+
     <script>
-        // Specify the API endpoint for food
-        const apiUrl = 'http://localhost:4000/Data';
+        // Læs data fra CSV-filen
+        fetch('plastic-pollution-by-country-2024.csv')
+            .then(response => response.text())
+            .then(data => {
+                const rows = data.split('\n').slice(1); // Ignorer header-rækken
+                const labels = [];
+                const values = [];
 
-        // Make a GET request using the Fetch API
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(Data => {
-                // Process the retrieved foods
-                let html = '';
-                Data.forEach(Country => {
-                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
-                    console.log(Country);
+                rows.forEach(row => {
+                    const [label, value] = row.split(','); // Antager, at dataene er adskilt af kommaer
+                    labels.push(label);
+                    values.push(parseFloat(value)); // Konverter til numerisk værdi
                 });
-                document.getElementById("test").innerHTML = html;
 
-                // Prepare data for the chart
-                const labels = Data.map(country => country.country_name);
-                const data = Data.map(country => country.total_waste);
-
-                // Get the canvas element
+                // Opret kurvediagram
                 const ctx = document.getElementById('myChart').getContext('2d');
-
-                // Create the chart
-                const myChart = new Chart(ctx, {
-                    type: 'bar',
+                new Chart(ctx, {
+                    type: 'line',
                     data: {
                         labels: labels,
                         datasets: [{
-                            label: 'Total Waste',
-                            data: data,
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)', // Juster farven efter behov
-                            borderColor: 'rgba(255, 99, 132, 1)', // Juster farven efter behov
+                            label: 'Plastic Pollution',
+                            data: values,
+                            borderColor: 'blue',
                             borderWidth: 1
                         }]
                     },
@@ -61,10 +47,7 @@
                     }
                 });
             })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-
+            .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
 </html>
