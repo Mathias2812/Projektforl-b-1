@@ -20,7 +20,7 @@
                 const values = [];
 
                 rows.forEach(row => {
-                    const [label, value] = row.split(','); // Antager, at dataene er adskilt af kommaer
+                    const [label, value, continent] = row.split(','); // Antager, at dataene er adskilt af kommaer og indeholder verdensdelen
                     labels.push(label);
                     values.push(parseFloat(value)); // Konverter til numerisk værdi
                 });
@@ -34,7 +34,7 @@
                         datasets: [{
                             label: 'Plastic Pollution',
                             data: values,
-                            backgroundColor: 'blue', // Søjlefarsen
+                            backgroundColor: getContinentColors(labels), // Farver baseret på verdensdele
                             borderColor: 'black', // Kantfarsen
                             borderWidth: 1
                         }]
@@ -44,11 +44,36 @@
                             y: {
                                 beginAtZero: true
                             }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false // Skjul standard-legenden
+                            }
                         }
                     }
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
+
+        // Funktion til at generere farver baseret på verdensdele
+        function getContinentColors(labels) {
+            const colors = {};
+            const uniqueContinents = [...new Set(labels)]; // Unikke verdensdele
+
+            // Tilføj tilfældige farver til hver verdensdel
+            uniqueContinents.forEach((continent, index) => {
+                colors[continent] = getRandomColor(index);
+            });
+
+            // Returnér farver baseret på verdensdelene i labels
+            return labels.map(label => colors[label]);
+        }
+
+        // Funktion til at generere en tilfældig farve
+        function getRandomColor(index) {
+            const hue = (index * 137.508) % 360; // Konstant til at opnå forskellige farver
+            return `hsl(${hue}, 70%, 50%)`; // Returnér en tilfældig farve i HSL-format
+        }
     </script>
 </body>
 </html>
