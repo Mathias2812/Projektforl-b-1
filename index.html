@@ -42,12 +42,22 @@
                     options: {
                         scales: {
                             y: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1000 // Angiv trin for skalaen på y-aksen
+                                }
                             }
                         },
                         plugins: {
                             legend: {
                                 display: false // Skjul standard-legenden
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.dataset.label + ': ' + context.parsed.y; // Vis etiketten med værdien
+                                    }
+                                }
                             }
                         }
                     }
@@ -71,9 +81,4 @@
 
         // Funktion til at generere en tilfældig farve
         function getRandomColor(index) {
-            const hue = (index * 137.508) % 360; // Konstant til at opnå forskellige farver
-            return `hsl(${hue}, 70%, 50%)`; // Returnér en tilfældig farve i HSL-format
-        }
-    </script>
-</body>
-</html>
+            const hue = (index * 137.508) % 360; // Konstant til at opnå forskellige 
