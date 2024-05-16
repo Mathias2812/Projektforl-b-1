@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurvediagram</title>
+    <title>Søjlediagram</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <canvas id="myChart" width="800" height="400"></canvas>
+    <canvas id="myChart"></canvas>
     <div id="test"></div>
 
     <script>
@@ -25,16 +25,16 @@
                     values.push(parseFloat(value)); // Konverter til numerisk værdi
                 });
 
-                // Opret kurvediagram
+                // Opret søjlediagram
                 const ctx = document.getElementById('myChart').getContext('2d');
                 new Chart(ctx, {
-                    type: 'line',
+                    type: 'bar',
                     data: {
                         labels: labels,
                         datasets: [{
                             label: 'Plastic Pollution',
                             data: values,
-                            borderColor: 'blue',
+                            backgroundColor: 'blue', // Farven på søjlerne
                             borderWidth: 1
                         }]
                     },
