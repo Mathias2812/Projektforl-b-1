@@ -81,4 +81,9 @@
 
         // Funktion til at generere en tilfældig farve
         function getRandomColor(index) {
-            const hue = (index * 137.508) % 360; // Konstant til at opnå forskellige 
+            const hue = (index * 137.508) % 360; // Konstant til at opnå forskellige farver
+            return `hsl(${hue}, 70%, 50%)`; // Returnér en tilfældig farve i HSL-format
+        }
+    </script>
+</body>
+</html>
