@@ -10,19 +10,6 @@
     <script src="queries.js"></script>
     <style>
         .file-input-label {
-            cursor: pointer;
-            display: inline-block;
-            padding: 8px 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #f0f0f0;
-        }
-
-        .file-input-label:hover {
-            background-color: #e0e0e0;
-        }
-
-        #fileInput {
             display: none;
         }
     </style>
@@ -31,74 +18,67 @@
 
 <canvas id="myChart"></canvas>
 
-<!-- Input til at vælge CSV-fil -->
-<label for="fileInput" class="file-input-label">Vælg en CSV-fil</label>
-<input type="file" id="fileInput" accept=".csv">
-
 <script>
     // Funktion til at læse CSV-fil
-    function readCSV(file, callback) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            const csv = event.target.result;
-            const data = csv.split('\n').map(row => row.split(','));
-            callback(data);
-        };
-        reader.readAsText(file);
-    }
+    function readCSV(data) {
+        // Processer CSV-dataen
+        const years = [];
+        const countries = [];
+        const totalWaste = [];
+        data.forEach(row => {
+            years.push(row[1]); // Indsaml årstal
+            countries.push(row[0]); // Indsaml lande/kontinenter
+            totalWaste.push(parseFloat(row[2])); // Indsaml total affald genanvendt
+        });
 
-    // Hent og læs CSV-filen
-    document.getElementById('fileInput').addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        readCSV(file, function(data) {
-            // Processer CSV-dataen
-            const years = [];
-            const countries = [];
-            const totalWaste = [];
-            data.forEach(row => {
-                years.push(row[1]); // Indsaml årstal
-                countries.push(row[0]); // Indsaml lande/kontinenter
-                totalWaste.push(parseFloat(row[2])); // Indsaml total affald genanvendt
-            });
-
-            // Opret søjlediagram
-            const ctx = document.getElementById('myChart').getContext('2d');
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: years, // Årstal på x-aksen
-                    datasets: [{
-                        label: 'Total Waste Recycled',
-                        data: totalWaste,
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Årstal' // Titel for x-aksen
-                            },
-                            ticks: {
-                                min: 2000, // Minimumsværdi på x-aksen
-                                max: 2019 // Maksimumsværdi på x-aksen
-                            }
+        // Opret søjlediagram
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: years, // Årstal på x-aksen
+                datasets: [{
+                    label: 'Total Waste Recycled',
+                    data: totalWaste,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Årstal' // Titel for x-aksen
                         },
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Entity' // Titel for y-aksen
-                            },
-                            beginAtZero: true
+                        ticks: {
+                            min: 2000, // Minimumsværdi på x-aksen
+                            max: 2019 // Maksimumsværdi på x-aksen
                         }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Entity' // Titel for y-aksen
+                        },
+                        beginAtZero: true
                     }
                 }
-            });
+            }
         });
-    });
+    }
+
+    // Simuler data fra CSV-fil
+    const data = [
+        ['Country A', '2000', '10'],
+        ['Country B', '2001', '20'],
+        ['Country C', '2002', '30'],
+        // Fortsæt med at tilføje data...
+    ];
+
+    // Kald readCSV med de simulerede data
+    readCSV(data);
 </script>
 
 </body>
