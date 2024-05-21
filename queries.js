@@ -12,7 +12,7 @@ const pool = new Pool({
 //route for /Data
 const getData = (request, response) => {
     pool.query(
-      "SELECT * FROM Country",
+      "SELECT * FROM COUNTRY",
       (error, results) => {
       if (error) {
         throw error;
