@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Søjlediagram</title>
     <!-- Inkludér Chart.js bibliotek -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Tilkoble queries.js -->
+    <script src="queries.js"></script>
 </head>
 <body>
 
 <canvas id="myChart"></canvas>
+
+<!-- Input til at vælge CSV-fil -->
+<input type="file" id="fileInput" accept=".csv">
 
 <script>
     // Funktion til at læse CSV-fil
@@ -62,9 +67,6 @@
         });
     });
 </script>
-
-<!-- Input til at vælge CSV-fil -->
-<input type="file" id="fileInput" accept=".csv">
 
 </body>
 </html>
