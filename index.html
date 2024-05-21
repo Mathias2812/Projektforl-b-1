@@ -74,7 +74,7 @@
                 // Process the retrieved foods
                 let html = '';
                 Data.forEach(Country => {
-                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
+                    html += `<p>${Country.country_name + " - " + Country.mwi_value} </p>`;
                     console.log(Country);
                 });
                 document.getElementById("test").innerHTML = html;
