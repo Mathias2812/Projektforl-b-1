@@ -3,19 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurvediagram</title>
-    <!-- Link til D3.js-biblioteket -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- Reference til script.js -->
-    <script src="script.js" defer></script>
-    <!-- Eventuelle yderligere stilark eller scripts kan inkluderes her -->
+    <title>Document</title>
+    <!-- Inkludér Chart.js bibliotek -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <!-- Div til visning af kurvediagrammet -->
-    <div id="my_dataviz"></div>
+<canvas id="myChart"></canvas>
 
-    <!-- Eventuelle yderligere HTML-elementer kan tilføjes her -->
+<script>
+    // Funktion til at læse CSV-fil
+    function readCSV(file, callback) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const csv = event.target.result;
+            const data = csv.split('\n').map(row => row.split(','));
+            callback(data);
+        };
+        reader.readAsText(file);
+    }
+
+    // Hent og læs CSV-filen
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        readCSV(file, function(data) {
+            // Processer CSV-dataen
+            const countries = [];
+            const totalWaste = [];
+            data.forEach(row => {
+                countries.push(row[0]);
+                totalWaste.push(parseFloat(row[1]));
+            });
+
+            // Opret søjlediagram
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: countries,
+                    datasets: [{
+                        label: 'Total Waste Recycled',
+                        data: totalWaste,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<!-- Input til at vælge CSV-fil -->
+<input type="file" id="fileInput" accept=".csv">
 
 </body>
 </html>
