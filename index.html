@@ -6,18 +6,19 @@
     <title>Søjlediagram</title>
     <!-- Inkludér Chart.js bibliotek -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Tilkoble queries.js -->
-    <script src="queries.js"></script>
-   
 </head>
 <body>
 
 <div id="chart"></div>
-<label for="countrySelect">Vælg land</label>
-<select id="countrySelect"></select>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<!-- Indlæs D3.js bibliotek -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
+
+<!-- Indlæs PapaParse bibliotek -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+<!-- Tilkoble queries.js efter D3.js og PapaParse er blevet indlæst -->
 <script src="queries.js"></script>
+
 </body>
 </html>
