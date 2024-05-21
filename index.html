@@ -1,21 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="stylesheet.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="http://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 </head>
 <body>
 
+    <nav class="navBar">
+        <a href="">Worldwide</a> <a href="">Outliers</a> <a href="">Graph</a>
+    </nav>
 
-    <p>Hej med dig bro</p>
+<!--  World map goes here -->
+    <div class="box">   
+       <div class="worldMap"> 
+        <svg id="my_data" width="300" height="400"></svg>
+        </div>
+    </div>
 
 <h1>jaja</h1>
 
 
+<!-- top 5 and facts section goes here-->
+<div class="box2">
+    <div class="top5"> </div>
+    <div class="factBox"></div>
+</div>
+
+<div class="graphBox">
+    <div class="graph"></div>
+</div>
 
 
+<div class="box3">
+    <div class="unfunFacts"></div>
+    <p id="box3Heading">10 Scary Facts!</p>
+    <div id="box3text">
+        <span>Only 9% of all plastic produced is recycled.</span>
+        <br>
+        <br>
+        <span>A whopping 2 million plastic bags are used every minute worldwide.</span>
+        <br>
+        <br>
+        <span>100 million marine animals die each year from plastic waste alone.</span>
+        <br>
+        <br>
+        <span>One million plastic bottles are bought every minute.</span>
+        <br>
+        <br>
+        <span>Nearly one-quarter of the world's plastic waste is mismanaged or littered.</span>
+        <br>
+        <br>
+        <span>A plastic bottle can last for 450 years in the marine environment, slowly <br> fragmenting into smaller and smaller pieces which never truly disappear.</span>
+        <br>
+        <br>
+        <span>There will be more plastic in our oceans than fish by 2050.</span>
+        <br>
+        <br>
+        <span>90% of plastic is made from fossil fuels.</span>
+        <br>
+        <br>
+        <span>It takes 22 gallons of water to make one pound of plastic.</span>
+        <br>
+        <br>
+        <span>If everyone switched to reusable bottles and carton water, we will <br> save enough energy to power New York City for an entire month.</span>
 
+    </div>
+</div>
+
+ <!--  Button that takes you to the top of the page! -->
+<footer>
+        <p>Tilbage til toppen</p>
+</footer>
 
 
 
@@ -47,7 +107,7 @@
                 // Process the retrieved foods
                 let html = '';
                 Data.forEach(Country => {
-                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
+                    html += `<p>${Country.country_name + " - " + Country.mwi_value} </p>`;
                     console.log(Country);
                 });
                 document.getElementById("test").innerHTML = html;
@@ -57,5 +117,9 @@
             });
 
     </script>
+
+
+<script src="scripts.js" type="module"></script>
+<script>src="carousel.js"</script>  
 </body>
 </html>

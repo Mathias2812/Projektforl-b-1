@@ -12,7 +12,7 @@ const pool = new Pool({
 //route for /Data
 const getData = (request, response) => {
     pool.query(
-      "SELECT",
+      "SELECT * FROM Country",
       (error, results) => {
       if (error) {
         throw error;
@@ -20,18 +20,6 @@ const getData = (request, response) => {
       response.status(200).json(results.rows);
     });
   };
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   //route for /insert-food
