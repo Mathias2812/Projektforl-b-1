@@ -2,7 +2,7 @@
 import Chart from 'chart.js/auto';
 
 // Læs data fra CSV-filen
-fetch('plastic-pollution-by-country-2024.csv')
+fetch('share-plastic-waste-recycled.csv')
   .then(response => response.text())
   .then(data => {
     const rows = data.split('\n').slice(1); // Ignorer header-rækken
@@ -18,20 +18,73 @@ fetch('plastic-pollution-by-country-2024.csv')
     // Opret kurvediagram
     const ctx = document.getElementById('myChart').getContext('2d');
     new Chart(ctx, {
-      type: 'line',
+      type: 'line', // Ændret til kurvediagram
       data: {
         labels: labels,
         datasets: [{
           label: 'Plastic Pollution',
           data: values,
           borderColor: 'blue',
-          borderWidth: 1
+          backgroundColor: 'rgba(0, 0, 255, 0.1)', // Tilføj baggrundsfarve for kurven
+          borderWidth: 2, // Tykkere linje
+          fill: true, // Udfyld området under kurven
+          tension: 0.4 // Gør kurven glattere
         }]
       },
       options: {
         scales: {
           y: {
-            beginAtZero: true
+            beginAtZero: true,
+            ticks: {
+              font: {
+                size: 14, // Skaler skriftstørrelsen op
+                family: 'Arial', // Brug en tydelig skrifttype
+                weight: 'bold', // Gør teksten fed
+              },
+              color: 'black' // Skriftfarve
+            },
+            title: {
+              display: true,
+              text: 'Total Waste',
+              font: {
+                size: 16, // Skaler skriftstørrelsen op for titlen
+                family: 'Arial', // Brug en tydelig skrifttype
+                weight: 'bold', // Gør titlen fed
+              },
+              color: 'black' // Titel farve
+            }
+          },
+          x: {
+            ticks: {
+              font: {
+                size: 14, // Skaler skriftstørrelsen op
+                family: 'Arial', // Brug en tydelig skrifttype
+                weight: 'bold', // Gør teksten fed
+              },
+              color: 'black' // Skriftfarve
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false // Skjul standard-legenden
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.dataset.label + ': ' + context.parsed.y; // Vis etiketten med værdien
+              }
+            },
+            titleFont: {
+              size: 14, // Skaler skriftstørrelsen op for værktøjslinjetitlen
+              family: 'Arial', // Brug en tydelig skrifttype
+              weight: 'bold', // Gør værktøjslinjetitlen fed
+            },
+            bodyFont: {
+              size: 14, // Skaler skriftstørrelsen op for værktøjslinjeteksten
+              family: 'Arial', // Brug en tydelig skrifttype
+              weight: 'bold', // Gør værktøjslinjeteksten fed
+            }
           }
         }
       }
@@ -39,9 +92,7 @@ fetch('plastic-pollution-by-country-2024.csv')
   })
   .catch(error => console.error('Error fetching data:', error));
 
-
-
-
+// PostgreSQL og CSV håndtering kode
 const { Pool } = require("pg");
 require("dotenv").config();
 const csvtojson = require("csvtojson");
@@ -53,98 +104,70 @@ const pool = new Pool({
   },
 });
 
-//route for /Data
+// Route for /Data
 const getData = (request, response) => {
-    pool.query(
-      "SELECT",
-      (error, results) => {
+  pool.query(
+    "SELECT * FROM Data_tmp", // Tilføj dine kolonner her
+    (error, results) => {
       if (error) {
         throw error;
       }
       response.status(200).json(results.rows);
-    });
-  };
+    }
+  );
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //route for /insert-food
+// Route for /insert-food
 const insertData = (request, response) => {
-    const { Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6} = request.body;
-    pool.query(
-      `INSERT INTO Data_tmp (Country, Mwi , Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6 ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
-      [Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6],
-      (error, results) => {
-        if (error) {
-          throw error;
-        }
-        response.status(201).send(`Data added`);
+  const { Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6 } = request.body;
+  pool.query(
+    `INSERT INTO Data_tmp (Country, Mwi , Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6 ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+    [Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6],
+    (error, results) => {
+      if (error) {
+        throw error;
       }
-    );
+      response.status(201).send('Data added');
+    }
+  );
+};
+
+// Route for /populateFoods
+const populateData = (request, response) => {
+  const plastdata = "share-plastic-waste-recycled.csv"; // Opdateret CSV-filnavn
+  const options = {
+    delimiter: ';'
   };
 
-  //route for /populateFoods
-const populateData = (request, response) => {
-    const plastdata = "plastic-pollution-by-country-2024.csv"; 
-    const options = {
-        delimiter: ';'
-      };
+  csvtojson().fromFile(plastdata, options).then(source => {
+    for (var i = 0; i < source.length; i++) {
+      var Country = source[i].Country;
+      var Mwi = source[i].Mwi;
+      var Mwi_level = source[i].Mwi_level;
+      var Total_waste = source[i].Total_waste;
+      var Skip_1 = source[i].Skip_1;
+      var Skip_2 = source[i].Skip_2;
+      var Skip_3 = source[i].Skip_3;
+      var Skip_4 = source[i].Skip_4;
+      var Skip_5 = source[i].Skip_5;
+      var Skip_6 = source[i].Skip_6;
 
-    csvtojson().fromFile(plastdata, options).then(source => {
-        //Fetching the data from each row
-        //and inserting to the table food_tmp
-        for (var i = 0; i < source.length; i++) {
+      let insertStatement = `INSERT INTO Data_tmp (Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`; 
+      let items = [Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6];
 
-          var Country = source[i].Country;
-          var Mwi = source[i].Mwi;
-          var Mwi_level = source[i].Mwi_level;
-          var Total_waste = source[i].Total_waste;
-          var Skip_1 = source[i].Skip_1;
-          var Skip_2 = source[i].Skip_2;
-          var Skip_3 = source[i].Skip_3;
-          var Skip_4 = source[i].Skip_4;
-          var Skip_5 = source[i].Skip_5;
-          var Skip_6 = source[i].Skip_6;
-  
-            //TODO: fortsæt med de andre kolonner
-            //TODO: her skal laves to variabler: insertStatement og items. 
-            let insertStatement = `INSERT INTO Data_tmp (Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`; 
-            let items = [Country, Mwi, Mwi_level, Total_waste, Skip_1, Skip_2, Skip_3, Skip_4, Skip_5, Skip_6 ];
-            //insertStatement skal bestå af sådan som du vil indsætte data i food_tmp tabellen, men med 
-            //placeholders $1, $2 osv i stedet for værdier
-            //items er en array med de variabler der er blevet defineret ud fra vores data lige ovenover
-    
-            //Inserting data of current row into database
-            pool.query(insertStatement, items, (err, results, fields) => {
-                if (err) {
-                    console.log("Unable to insert item at row " + i+1);
-                    return console.log(err);
-                }
-            });
+      pool.query(insertStatement, items, (err, results, fields) => {
+        if (err) {
+          console.log("Unable to insert item at row " + (i + 1));
+          return console.log(err);
         }
-        response.status(201).send('All Data added');
-    })
-  }
+      });
+    }
+    response.status(201).send('All Data added');
+  });
+}
 
 module.exports = {
   getData, 
   insertData,
   populateData,
 };
-
-
-
-// In the context of parameterized queries using the pg library in Node.js, the placeholders are represented by $1, $2, and so on, instead of using ${name} syntax
-// The reason for this difference is that the $1, $2 syntax is specific to the pg library and the PostgreSQL query protocol. It is used to bind parameters securely and efficiently in the query.
-// When using parameterized queries with the pg library, you pass the actual values as an array in the second parameter of the query() function. The library internally maps these values to the corresponding placeholders in the SQL query string based on their position in the array.
-// Therefore, in the given code snippet, you should continue using $1, $2, and $3 placeholders to represent the variables name, email, and id, respectively, instead of using the ${name} syntax.

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Søjlediagram</title>
+    <title>Kurvediagram</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -12,7 +12,7 @@
 
     <script>
         // Læs data fra CSV-filen
-        fetch('plastic-pollution-by-country-2024.csv')
+        fetch('share-plastic-waste-recycled.csv') // Opdateret filnavn
             .then(response => response.text())
             .then(data => {
                 const rows = data.split('\n').slice(1); // Ignorer header-rækken
@@ -25,18 +25,20 @@
                     values.push(parseFloat(value)); // Konverter til numerisk værdi
                 });
 
-                // Opret søjlediagram
+                // Opret kurvediagram
                 const ctx = document.getElementById('myChart').getContext('2d');
                 new Chart(ctx, {
-                    type: 'bar',
+                    type: 'line', // Ændret til kurvediagram
                     data: {
                         labels: labels,
                         datasets: [{
                             label: 'Plastic Pollution',
                             data: values,
-                            backgroundColor: getContinentColors(labels), // Farver baseret på verdensdele
-                            borderColor: 'black', // Kantfarsen
-                            borderWidth: 1
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)', // Farve til området under kurven
+                            borderColor: 'rgba(255, 99, 132, 1)', // Farve til linjen
+                            borderWidth: 2, // Tykkelse af linjen
+                            fill: true, // Udfyld området under kurven
+                            tension: 0.4 // Gør kurven glattere
                         }]
                     },
                     options: {
