@@ -21,22 +21,13 @@ d.Year = parseTime(d.Year);
 d.Value = +d.Value;
 });
 
-// Extract unique countries and years for the dropdowns
+// Extract unique countries for the dropdown
 const countries = Array.from(new Set(data.map(d => d.Country)));
-const years = Array.from(new Set(data.map(d => d.Year.getFullYear())));
 
 // Populate the country dropdown
 const countrySelect = d3.select("#countrySelect");
 countrySelect.selectAll("option")
 .data(countries)
-.enter()
-.append("option")
-.text(d => d);
-
-// Populate the year dropdown
-const yearSelect = d3.select("#yearSelect");
-yearSelect.selectAll("option")
-.data(years)
 .enter()
 .append("option")
 .text(d => d);
