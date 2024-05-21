@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 100, bottom: 30, left: 50},
+var margin = {top: 30, right: 100, bottom: 60, left: 60},
     width = 600 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -9,8 +9,7 @@ var svg = d3.select("#my_dataviz")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Read the data
 d3.csv("share-plastic-waste-recycled.csv", function(data) {
@@ -78,6 +77,39 @@ d3.csv("share-plastic-waste-recycled.csv", function(data) {
       .attr("fill", function(d) { return myColor(d.entity); })
       .attr("cx", function(d) { return x(d.year) + x.bandwidth() / 2; })
       .attr("cy", function(d) { return y(d['share of waste recycled']); })
-      .attr("r", 5);
+      .attr("r", 5)
+      .on("mouseover", function(event, d) {
+        d3.select(this)
+          .transition()
+          .duration(100)
+          .attr("r", 8);
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", .9);
+        tooltip.html("Entity: " + d.entity + "<br/>Year: " + d.year + "<br/>Share of Waste Recycled: " + d['share of waste recycled'] + "%")
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+        d3.select(this)
+          .transition()
+          .duration(100)
+          .attr("r", 5);
+        tooltip.transition()
+          .duration(500)
+          .style("opacity", 0);
+      });
+
+    // Add tooltip
+    var tooltip = d3.select("body")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-width", "1px")
+      .style("border-radius", "5px")
+      .style("padding", "10px");
 
 });
