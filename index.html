@@ -25,7 +25,15 @@
 
 <!-- top 5 and facts section goes here-->
 <div class="box2">
-    <div class="top5"> </div>
+    <div class="top5" id="top5"> 
+    <!-- Load d3.js -->
+<script src= "barchart.js"></script>
+
+<!-- 2 buttons that change the datasets for the barchart -->
+<button onclick="update(mwiOutliers)">MWI</button>
+<button onclick="update(wasteOutliers)">Total Waste</button>    
+
+    </div>
     <div class="factBox"></div>
 </div>
 
@@ -105,7 +113,7 @@
                 // Process the retrieved foods
                 let html = '';
                 Data.forEach(Country => {
-                    html += `<p>${Country.country_name + " - " + Country.mwi_value} </p>`;
+                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
                     console.log(Country);
                 });
                 document.getElementById("test").innerHTML = html;
