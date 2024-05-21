@@ -8,78 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Tilkoble queries.js -->
     <script src="queries.js"></script>
-    <style>
-        .file-input-label {
-            display: none;
-        }
-    </style>
+   
 </head>
 <body>
 
-<canvas id="myChart"></canvas>
+<div id="chart"></div>
+<label for="countrySelect">Vælg land</label>
+<select id="countrySelect"></select>
 
-<script>
-    // Funktion til at læse CSV-fil
-    function readCSV(data) {
-        // Processer CSV-dataen
-        const years = [];
-        const countries = [];
-        const totalWaste = [];
-        data.forEach(row => {
-            years.push(row[1]); // Indsaml årstal
-            countries.push(row[0]); // Indsaml lande/kontinenter
-            totalWaste.push(parseFloat(row[2])); // Indsaml total affald genanvendt
-        });
 
-        // Opret søjlediagram
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: years, // Årstal på x-aksen
-                datasets: [{
-                    label: 'Total Waste Recycled',
-                    data: totalWaste,
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Årstal' // Titel for x-aksen
-                        },
-                        ticks: {
-                            min: 2000, // Minimumsværdi på x-aksen
-                            max: 2019 // Maksimumsværdi på x-aksen
-                        }
-                    },
-                    y: {
-                        title: {
-                            display: true,
-                            text: 'Entity' // Titel for y-aksen
-                        },
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    }
-
-    // Simuler data fra CSV-fil
-    const data = [
-        ['Country A', '2000', '10'],
-        ['Country B', '2001', '20'],
-        ['Country C', '2002', '30'],
-        // Fortsæt med at tilføje data...
-    ];
-
-    // Kald readCSV med de simulerede data
-    readCSV(data);
-</script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="queries.js"></script>
 </body>
 </html>
