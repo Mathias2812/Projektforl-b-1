@@ -8,12 +8,31 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Tilkoble queries.js -->
     <script src="queries.js"></script>
+    <style>
+        .file-input-label {
+            cursor: pointer;
+            display: inline-block;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+        }
+
+        .file-input-label:hover {
+            background-color: #e0e0e0;
+        }
+
+        #fileInput {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
 <canvas id="myChart"></canvas>
 
 <!-- Input til at vælge CSV-fil -->
+<label for="fileInput" class="file-input-label">Vælg en CSV-fil</label>
 <input type="file" id="fileInput" accept=".csv">
 
 <script>
