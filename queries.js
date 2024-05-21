@@ -6,23 +6,23 @@ fetch('share-plastic-waste-recycled.csv')
   .then(response => response.text())
   .then(data => {
     const rows = data.split('\n').slice(1); // Ignorer header-rækken
-    const labels = [];
+    const years = [];
     const values = [];
 
     rows.forEach(row => {
-      const [label, value] = row.split(','); // Antager, at dataene er adskilt af kommaer
-      labels.push(label);
+      const [year, value] = row.split(','); // Antager, at dataene er adskilt af kommaer
+      years.push(year);
       values.push(parseFloat(value)); // Konverter til numerisk værdi
     });
 
     // Opret kurvediagram
     const ctx = document.getElementById('myChart').getContext('2d');
     new Chart(ctx, {
-      type: 'line', // Ændret til kurvediagram
+      type: 'line', // Kurvediagram
       data: {
-        labels: labels,
+        labels: years, // x-aksen er 'year'
         datasets: [{
-          label: 'Plastic Pollution',
+          label: 'Share Waste of Recycled',
           data: values,
           borderColor: 'blue',
           backgroundColor: 'rgba(0, 0, 255, 0.1)', // Tilføj baggrundsfarve for kurven
@@ -35,6 +35,16 @@ fetch('share-plastic-waste-recycled.csv')
         scales: {
           y: {
             beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Share Waste of Recycled',
+              font: {
+                size: 16, // Skaler skriftstørrelsen op for titlen
+                family: 'Arial', // Brug en tydelig skrifttype
+                weight: 'bold', // Gør titlen fed
+              },
+              color: 'black' // Titel farve
+            },
             ticks: {
               font: {
                 size: 14, // Skaler skriftstørrelsen op
@@ -42,19 +52,19 @@ fetch('share-plastic-waste-recycled.csv')
                 weight: 'bold', // Gør teksten fed
               },
               color: 'black' // Skriftfarve
-            },
+            }
+          },
+          x: {
             title: {
               display: true,
-              text: 'Total Waste',
+              text: 'Year',
               font: {
                 size: 16, // Skaler skriftstørrelsen op for titlen
                 family: 'Arial', // Brug en tydelig skrifttype
                 weight: 'bold', // Gør titlen fed
               },
               color: 'black' // Titel farve
-            }
-          },
-          x: {
+            },
             ticks: {
               font: {
                 size: 14, // Skaler skriftstørrelsen op
@@ -72,7 +82,7 @@ fetch('share-plastic-waste-recycled.csv')
           tooltip: {
             callbacks: {
               label: function(context) {
-                return context.dataset.label + ': ' + context.parsed.y; // Vis etiketten med værdien
+                return `Year: ${context.label}, Share: ${context.parsed.y}`; // Vis etiketten med værdierne
               }
             },
             titleFont: {
