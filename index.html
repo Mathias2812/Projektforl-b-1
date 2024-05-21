@@ -52,13 +52,11 @@
         const file = event.target.files[0];
         readCSV(file, function(data) {
             // Processer CSV-dataen
-            const years = [];
             const countries = [];
-            const plasticRecycled = [];
+            const totalWaste = [];
             data.forEach(row => {
-                years.push(row[1]); // Indsaml årstal
-                countries.push(row[0]); // Indsaml lande/kontinenter
-                plasticRecycled.push(parseFloat(row[2])); // Indsaml andel af genanvendt plast
+                countries.push(row[0]);
+                totalWaste.push(parseFloat(row[1]));
             });
 
             // Opret søjlediagram
@@ -66,46 +64,27 @@
             const myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: years, // Årstal på x-aksen
-                    datasets: countries.map((country, index) => {
-                        return {
-                            label: country,
-                            data: [plasticRecycled[index]], // Andel af genanvendt plast på y-aksen
-                            backgroundColor: getRandomColor(), // Tilfældig farve for hvert land/kontinent
-                            borderWidth: 1
-                        };
-                    })
+                    labels: countries,
+                    datasets: [{
+                        label: 'Total Waste Recycled',
+                        data: totalWaste,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
                 },
                 options: {
                     scales: {
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Årstal' // Titel for x-aksen
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
                             }
-                        },
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Andel af genanvendt plast' // Titel for y-aksen
-                            },
-                            beginAtZero: true
-                        }
+                        }]
                     }
                 }
             });
         });
     });
-
-    // Funktion til at generere tilfældig farve
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
 </script>
 
 </body>
