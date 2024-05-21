@@ -44,7 +44,33 @@
                             y: {
                                 beginAtZero: true,
                                 ticks: {
-                                    stepSize: 1000 // Angiv trin for skalaen på y-aksen
+                                    stepSize: 1000, // Angiv trin for skalaen på y-aksen
+                                    font: {
+                                        size: 14, // Skaler skriftstørrelsen op
+                                        family: 'Arial', // Brug en tydelig skrifttype
+                                        weight: 'bold', // Gør teksten fed
+                                    },
+                                    color: 'black' // Skriftfarve
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Total Waste',
+                                    font: {
+                                        size: 16, // Skaler skriftstørrelsen op for titlen
+                                        family: 'Arial', // Brug en tydelig skrifttype
+                                        weight: 'bold', // Gør titlen fed
+                                    },
+                                    color: 'black' // Titel farve
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: {
+                                        size: 14, // Skaler skriftstørrelsen op
+                                        family: 'Arial', // Brug en tydelig skrifttype
+                                        weight: 'bold', // Gør teksten fed
+                                    },
+                                    color: 'black' // Skriftfarve
                                 }
                             }
                         },
@@ -57,6 +83,16 @@
                                     label: function(context) {
                                         return context.dataset.label + ': ' + context.parsed.y; // Vis etiketten med værdien
                                     }
+                                },
+                                titleFont: {
+                                    size: 14, // Skaler skriftstørrelsen op for værktøjslinjetitlen
+                                    family: 'Arial', // Brug en tydelig skrifttype
+                                    weight: 'bold', // Gør værktøjslinjetitlen fed
+                                },
+                                bodyFont: {
+                                    size: 14, // Skaler skriftstørrelsen op for værktøjslinjeteksten
+                                    family: 'Arial', // Brug en tydelig skrifttype
+                                    weight: 'bold', // Gør værktøjslinjeteksten fed
                                 }
                             }
                         }
