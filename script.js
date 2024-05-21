@@ -58,7 +58,7 @@ d3.csv("share-plastic-waste-recycled.csv", function(data) {
         });
       })
       .attr("fill", "none")
-      .attr("stroke", function(d) { return myColor(d[0].entity); })
+      .attr("stroke", function(d) { return myColor(d); })
       .attr("stroke-width", 2.5)
       .attr("d", d3.line()
         .x(function(d) { return x(d.year) + x.bandwidth() / 2; })
@@ -99,6 +99,26 @@ d3.csv("share-plastic-waste-recycled.csv", function(data) {
           .duration(500)
           .style("opacity", 0);
       });
+
+    // Add legend
+    var legend = svg.selectAll(".legend")
+      .data(entities)
+      .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+    legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", myColor);
+
+    legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d; });
 
     // Add tooltip
     var tooltip = d3.select("body")
