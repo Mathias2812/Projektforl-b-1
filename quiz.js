@@ -48,7 +48,7 @@ function answer(isTrue) {
     }
     document.getElementById('score').innerText = `Score: ${score}`;
     currentQuestionIndex++;
-    setTimeout(showQuestion, 6000); // Viser feedback i 6 sekunder før den går videre til næste spørgsmål
+    setTimeout(showQuestion, 5000); // Viser feedback i 5 sekunder før den går videre til næste spørgsmål
 }
 
 // initiere quizzen
