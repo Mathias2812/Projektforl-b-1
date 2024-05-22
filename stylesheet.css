@@ -104,19 +104,53 @@ footer {
 
 #box3Heading {
     font-size: 30px;
-    margin-top: -30px;
-    margin-left: 600px;
+    margin-bottom: 20px;  
     color: aqua;
     text-shadow: 3px 3px 3px black;
 }
 
 #box3text {
     margin-top: auto;
-    margin-left: 600px;
     text-align: auto;
     color: aqua;
     text-shadow: 3px 3px 3px black;
 }
+
+
+.quiz-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.question {
+    font-size: 1.2em;
+}
+.buttons{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    
+}
+.score, .explanation, .feedback {
+    margin-top: 4   0px;
+    font-size: 1.2em;
+}
+#box3Heading {
+    margin-top: auto;
+    text-align: auto;
+    
+}
+
 
 #top5 {
     display: flex;
