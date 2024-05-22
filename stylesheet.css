@@ -41,6 +41,7 @@ footer {
 .top5 {
     margin-right: 20px;
     text-align: center;
+    position: relative;
 }
 .factBox {
     margin-left: 20px;
@@ -115,4 +116,24 @@ footer {
     text-align: auto;
     color: aqua;
     text-shadow: 3px 3px 3px black;
+}
+
+#top5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 100px;
+  }
+
+#mwiOutliers {
+    position: absolute;
+    bottom: 50px;
+    left: 250px;
+}
+
+#wasteOutliers {
+    position: absolute;
+    bottom: 50px;
+    left: 300px; /* Adjusted position to prevent overlapping */
 }

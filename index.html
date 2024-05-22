@@ -30,8 +30,8 @@
 <script src= "barchart.js"></script>
 
 <!-- 2 buttons that change the datasets for the barchart -->
-<button onclick="update(mwiOutliers)">MWI</button>
-<button onclick="update(wasteOutliers)">Total Waste</button>    
+<button onclick="update(mwiOutliers)" id="mwiOutliers">MWI</button>
+<button onclick="update(wasteOutliers)" id="wasteOutliers">Total Waste</button>    
 
     </div>
     <div class="factBox"></div>
@@ -97,7 +97,7 @@
     
 
     <div id="test"></div>
-    <script>
+    <script> 
         // Specify the API endpoint for food
         const apiUrl = 'http://localhost:4000/Data';
 
@@ -120,7 +120,7 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-            });
+            }); 
 
     </script>
 
