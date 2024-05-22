@@ -20,6 +20,7 @@ fetch(apiUrl)
         console.error('Error:', error);
     });
 
+     // We load in our data and our world map here
 function loadGeoJsonAndDrawMap() {
     d3.queue()
         .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
@@ -41,9 +42,9 @@ function drawMap(geoJsonData, worldData) {
         .center([0, 20])
         .translate([svgWidth / 2, svgHeight / 2]);
 
-    let colorScale = d3.scaleLinear()
+        let colorScale = d3.scaleLinear()
         .domain(d3.extent(worldData, d => d.mwi_value))
-        .range(["blue", "red"]);
+        .range(["#ffcccc", "#ff0000"]); 
 
     let dataMap = new Map(worldData.map(d => [d.country_code, d]));
 
@@ -71,4 +72,6 @@ function drawMap(geoJsonData, worldData) {
         .on("mouseleave", function() {
             d3.select(this).style("opacity", .8);
         });
+        
 }
+

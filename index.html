@@ -19,6 +19,19 @@
     <div class="box">   
        <div class="worldMap"> 
         <svg id="my_data" width="300" height="400"></svg>
+        <div id="infoBox" class="info-box"></div>
+        <div class="legend">
+            <div class="color-bar"></div>
+            <div class="legend-text">
+                <span>0%</span>
+                <span>25%</span>
+                <span>50%</span>
+                <span>75%</span>
+                <span>100%</span>
+            </div>
+        </div>
+        <p id="Mwi">Mismanaged Waste Index (MWI)  = </p>
+        <p id="MwiTekst"> Sum of uncollected and improperly managed waste, divided by the waste generated.</p>
         </div>
     </div>
 
@@ -81,40 +94,6 @@
 
 
 
-
-
-
-
-
-    
-
-    <div id="test"></div>
-    <script>
-        // Specify the API endpoint for food
-        const apiUrl = 'http://localhost:4000/Data';
-
-        // Make a GET request using the Fetch API
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(Data => {
-                // Process the retrieved foods
-                let html = '';
-                Data.forEach(Country => {
-                    html += `<p>${Country.country_code + " - " + Country.mwi_value} </p>`;
-                    console.log(Country);
-                });
-                document.getElementById("test").innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-
-    </script>
 
 
 <script src="scripts.js" type="module"></script>

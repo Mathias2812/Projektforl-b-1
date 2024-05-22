@@ -2,7 +2,7 @@
     margin-left: auto; 
             margin-right: auto; 
             width: 90%;
-            height: 710px; 
+            height:850px; 
             background-color: #2d545e;
             padding: 50px; 
             box-sizing: border-box; 
@@ -115,4 +115,42 @@ footer {
     text-align: auto;
     color: aqua;
     text-shadow: 3px 3px 3px black;
+}
+legend {
+    display: flex;
+    align-items: center;
+}
+
+.color-bar {
+    width: 1200 px; /* Juster bredden efter behov */
+    height: 30px;
+    background: linear-gradient(to right, #ffcccc, #ff0000); /* Juster farveskalaen efter behov */
+}
+
+.legend-text {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.legend-text span {
+    font-size: 20px;
+}
+
+#Mwi {
+    font-weight: bolder;
+}
+
+body {
+   font-family: 'Courier New', Courier, monospace;
+}
+.info-box {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: none; /* Skjuler info-boksen som standard */
 }
