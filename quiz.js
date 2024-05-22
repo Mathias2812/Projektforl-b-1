@@ -42,6 +42,7 @@ function answer(isTrue) {
     if (isTrue === currentQuestion.answer) {
         score++;
         document.getElementById('feedback').innerText = "Correct!";
+        document.getElementById('explanation').innerText = `Explanation: ${currentQuestion.explanation}`;
     } else {
         document.getElementById('feedback').innerText = "Wrong!";
         document.getElementById('explanation').innerText = `Explanation: ${currentQuestion.explanation}`;
