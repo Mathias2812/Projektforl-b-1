@@ -29,7 +29,6 @@ function loadGeoJsonAndDrawMap() {
             drawMap(geoJsonData, worldData);
         });
 }
-
 function drawMap(geoJsonData, worldData) {
     let svgWidth = 1200;
     let svgHeight = 600;
@@ -47,6 +46,7 @@ function drawMap(geoJsonData, worldData) {
         .range(["#ffcccc", "#ff0000"]); 
 
     let dataMap = new Map(worldData.map(d => [d.country_code, d]));
+
 
     svg.append("g")
         .selectAll("path")
