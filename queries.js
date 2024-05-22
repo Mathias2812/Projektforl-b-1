@@ -80,10 +80,44 @@ const populateData = (request, response) => {
     })
   }
 
+
+  // Route for /data/mwiOutliers
+const getmwiOutliers = (request, response) => {
+  pool.query(
+    "SELECT Country_name, mwi_value FROM Country ORDER BY mwi_value DESC LIMIT 5;",
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).json(results.rows);
+    }
+  );
+};
+
+
+  // Route for /data/wasteOutliers
+  const getwasteOutliers = (request, response) => {
+    pool.query(
+      "SELECT Country_name, total_waste FROM Country ORDER BY total_waste DESC LIMIT 5;",
+      (error, results) => {
+        if (error) {
+          throw error;
+        }
+        response.status(200).json(results.rows);
+      }
+    );
+  };
+  
+
+
+
+
 module.exports = {
   getData, 
   insertData,
   populateData,
+  getmwiOutliers,
+  getwasteOutliers,
 };
 
 

@@ -1,41 +1,36 @@
-// create first data set
-let mwiOutliers = 
-  
-// Specify the API endpoint for Data
-apiUrl = 'http://localhost:4000/Data';
+// create the datasets
+let mwiOutliers = [];
+let wasteOutliers = [];
 
-    // Make a GET request using the Fetch API
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        // Process the retrieved data
-        .then(Data => {
-        mwiOutliers = Data
-        });
-
-// create second data set
-
-let wasteOutliers =
 
 // Specify the API endpoint for Data
-apiUrl = 'http://localhost:4000/Data';
+const apiUrls = [
+    'http://localhost:4000/data/mwiOutliers', 'http://localhost:4000/data/wasteOutliers'];
 
-    // Make a GET request using the Fetch API
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        // Process the retrieved data
-        .then(Data => {
-        wasteOutliers = Data
-        });
+
+
+
+Promise.all(apiUrls.map(url => fetch(url).then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })))
+    .then(dataArray => {
+        // Store the fetched data in respective variables
+        mwiOutliers = dataArray[0];
+        wasteOutliers = dataArray[1];
+
+        // Log the fetched data to the console
+        console.log('mwiOutliers:', mwiOutliers);
+        console.log('wasteOutliers:', wasteOutliers)
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+
+
 
  // set the dimensions and margins of the graph
  let margin = {top: 30, right: 30, bottom: 70, left: 60},
