@@ -61,7 +61,7 @@ function update(data) {
   x.domain(data.map(function(d) { return d.country_name; }));
 
   // Update the domain of the y scale based on the maximum value in the dataset
-  y.domain([0, d3.max(data, function(d) { return d.mwi_value; })]);
+  y.domain([0, d3.max(data, function(d) { return d.mwi_value ; })]);
 
   // Draw the X axis
   svg.append("g")
@@ -126,10 +126,10 @@ svg.select(".myYaxis")
     .append("rect")
     .attr("x", function(d) { return x(d.country_name); })
     .attr("width", x.bandwidth())
-    .attr("y", function(d) { return y(d.total_waste || d.mwi_value); })
+    .attr("y", function(d) { return y(d.total_waste || d.mwi_value ); })
     .attr("height", function(d) { return height - y(d.total_waste || d.mwi_value); })
     .attr("fill", "#33AFFF");
-
+  
   // Add labels with data value
   svg.selectAll("rect")
     .each(function(d) {
@@ -139,7 +139,7 @@ svg.select(".myYaxis")
         .attr("y", y(d.total_waste || d.mwi_value) - 5) // Adjust the y position for better positioning
         .attr("text-anchor", "middle")
         .attr("fill", "white")
-        .text(d.total_waste || d.mwi_value);
+        .text(d.total_waste || d.mwi_value + '%');
     });
 }
 
@@ -158,8 +158,8 @@ svg.append("g")
   .attr("class", "myYaxis")
   .call(d3.axisLeft(y));
 
-// Event listener for the button click
+// Add button click effect
 document.getElementById("updateButton").addEventListener("click", function() {
-  // Call the update function with the wasteOutliers data
+  // Call the update function with wasteOutliers data
   update(wasteOutliers);
 });

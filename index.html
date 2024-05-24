@@ -26,16 +26,30 @@
 <!-- top 5 and facts section goes here-->
 <div class="box2">
     <div class="top5" id="top5"> 
-    <!-- Load d3.js -->
+        <h1 class="heading" id="top5Heading">Discover the biggest plastic waste sinners!</h1>
+        <p id="top5Description">Choose between percentage of plastic waste mismanaged and total plastic waste generated</p>
+    <!-- Loading barchart script -->
 <script src= "barchart.js"></script>
 
 <!-- 2 buttons that change the datasets for the barchart -->
-<button onclick="update(mwiOutliers)" id="mwiOutliers">MWI</button>
-<button onclick="update(wasteOutliers)" id="wasteOutliers">Total Waste</button>    
+<button onclick="update(mwiOutliers)" id="mwiOutliers" class="button">MWI</button>
+<button onclick="update(wasteOutliers)" id="wasteOutliers" class="button">Total Waste</button>    
 
     </div>
-    <div class="factBox"></div>
+    <div class="infoBox">
+
+        <h1 class="heading" id="infoboxHeading"> Why is plastic waste such a struggle in these countries? </h1>
+
+        <p>Both Solomon Islands and Suriname mismanage 100% of their waste, with other countries such as Mozambique, Madagascar and Uganda with around 99%.</p>
+        <p>They don't have the infrastructure or methods to manage their plastic waste correctly.</p>
+        <p>Large amounts of these plastic therefore end up littered or emitted to the ocean</p>
+
+    </div>
 </div>
+
+
+
+
 
 <div class="graphBox">
     <div class="graph"></div>
