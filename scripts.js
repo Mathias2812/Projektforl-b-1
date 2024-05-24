@@ -104,10 +104,10 @@ d3.csv("share-plastic-waste-recycled.csv").then(data => {
     .text("Percentage of plastic recycled");
 
   // Add legend
-  const visual = svg.selectAll(".legend")
+  const visual = svg.selectAll(".visual")
     .data(countries)
     .enter().append("g")
-    .attr("class", "legend")
+    .attr("class", "visual")
     .attr("transform", (d, i) => `translate(${width + 20},${i * 20})`);
 
   visual.append("rect")
