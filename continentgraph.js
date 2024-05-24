@@ -1,3 +1,4 @@
+
 // Set the dimensions and margins of the graph
 const margin = {top: 20, right: 180, bottom: 50, left: 50},
 width = 1200 - margin.left - margin.right,
@@ -93,22 +94,23 @@ d3.csv("share-plastic-waste-recycled.csv").then(data => {
     .text("Percentage");
 
   // Add legend
-  const legend = svg.selectAll(".legend")
+  const visuals = svg.selectAll(".visuals")
     .data(countries)
     .enter().append("g")
     .attr("class", "legend")
     .attr("transform", (d, i) => `translate(${width + 20},${i * 20})`);
 
-  legend.append("rect")
+  visuals.append("rect")
     .attr("x", 0)
     .attr("width", 18)
     .attr("height", 18)
     .style("fill", color);
 
-  legend.append("text")
+  visuals.append("text")
     .attr("x", 24)
     .attr("y", 9)
     .attr("dy", ".35em")
     .style("font-size", "12px")
     .text(d => d);
+
 });
