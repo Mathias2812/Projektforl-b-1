@@ -1,12 +1,12 @@
 // Set the dimensions and margins of the graph
-const margin = {top: 20, right: 180, bottom: 50, left: 50},
-width = 1200 - margin.left - margin.right,
-height = 500 - margin.top - margin.bottom;
+const margin = {top: 20, right: 180, bottom: 50, left: 50};
+const width = 1200 - margin.left - margin.right;
+const height = 500 - margin.top - margin.bottom;
 
 // Clear any existing SVG
 d3.select("#chart").selectAll("*").remove();
 
-// Append the svg object to the body of the page
+// Append the SVG object to the body of the page
 const svg = d3.select("#chart")
   .append("svg")
   .attr("width", width + margin.left + margin.right)
@@ -19,13 +19,18 @@ const parseTime = d3.timeParse("%Y");
 
 // Load the CSV file
 d3.csv("share-plastic-waste-recycled.csv", data => {
+  console.log("Loaded data:", data);
+
+  // Data parsing
   data.forEach(d => {
     d.Year = parseTime(d.Year);
     d.Value = +d.Value;
   });
+  console.log("Parsed data:", data);
 
   // Extract unique countries for the color scale
   const countries = Array.from(new Set(data.map(d => d.Country)));
+  console.log("Unique countries:", countries);
 
   // Set the ranges
   const x = d3.scaleTime().range([0, width]);
@@ -34,6 +39,8 @@ d3.csv("share-plastic-waste-recycled.csv", data => {
   // Scale the range of the data
   x.domain(d3.extent(data, d => d.Year));
   y.domain([0, d3.max(data, d => d.Value)]);
+  console.log("X domain:", x.domain());
+  console.log("Y domain:", y.domain());
 
   // Define the line
   const line = d3.line()
@@ -44,29 +51,34 @@ d3.csv("share-plastic-waste-recycled.csv", data => {
   // Set up color scale with a better palette
   const color = d3.scaleOrdinal(d3.schemeTableau10)
     .domain(countries);
+  console.log("Color scale domain:", color.domain());
 
   // Group data by country
   const dataByCountry = d3.nest()
     .key(d => d.Country)
     .entries(data);
+  console.log("Data by country:", dataByCountry);
 
   // Add the lines for each country
-  svg.selectAll(".line")
-    .data(dataByCountry)
-    .enter().append("path")
-    .attr("class", "line")
-    .attr("d", d => line(d.values))
-    .style("fill", "none")
-    .style("stroke", d => color(d.key))
-    .style("stroke-width", "2.5px")
-    .style("opacity", 0.7)
-    .on("mouseover", function(event, d) {
-      d3.selectAll(".line").style("opacity", 0.1);
-      d3.select(this).style("opacity", 1).style("stroke-width", "4px");
-    })
-    .on("mouseout", function(event, d) {
-      d3.selectAll(".line").style("opacity", 0.7).style("stroke-width", "2.5px");
-    });
+svg.selectAll(".line")
+.data(dataByCountry)
+.enter().append("path")
+.attr("class", "line")
+.attr("d", d => {
+  console.log("Line data:", d.values);
+  return line(d.values);
+})
+.style("fill", "none")
+.style("stroke", d => color(d.key))
+.style("stroke-width", "2.5px")
+.style("opacity", 0.7)
+.on("mouseover", function(event, d) {
+  d3.selectAll(".line").style("opacity", 0.1);
+  d3.select(this).style("opacity", 1).style("stroke-width", "4px");
+})
+.on("mouseout", function(event, d) {
+  d3.selectAll(".line").style("opacity", 0.7).style("stroke-width", "2.5px");
+});
 
   // Add the X Axis
   svg.append("g")
@@ -101,7 +113,7 @@ d3.csv("share-plastic-waste-recycled.csv", data => {
     .style("fill", "white")
     .attr("text-anchor", "middle")
     .attr("font-size", "17px")
-    .attr("font-weight", "bold")
+    .attr("font-weight", "bold")  
     .text("Percentage of plastic recycled");
 
   // Add legend
@@ -125,3 +137,4 @@ d3.csv("share-plastic-waste-recycled.csv", data => {
     .style("fill", "white")  // Set text color to white
     .text(d => d);
 });
+
