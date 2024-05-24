@@ -1,3 +1,6 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+ }
 .box {
     margin-left: auto; 
             margin-right: auto; 
@@ -11,6 +14,12 @@
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             border: 3px solid black;
+}
+#headlineTop {
+    font-size: 30px;
+    text-align: center;
+    
+
 }
 
 h1 {
@@ -119,6 +128,30 @@ footer {
     text-align: auto;
     color: aqua;
     text-shadow: 3px 3px 3px black;
+}
+legend {
+    display: flex;
+    align-items: center;
+}
+
+.color-bar {
+    width: 1200 px; /* Juster bredden efter behov */
+    height: 30px;
+    background: linear-gradient(to right, #ffcccc, #ff0000); /* Juster farveskalaen efter behov */
+}
+
+.legend-text {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.legend-text span {
+    font-size: 20px;
+}
+
+#Mwi {
+    font-weight: bolder;
 }
 
 
