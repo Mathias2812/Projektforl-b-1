@@ -12,13 +12,13 @@ const svg = d3.select("#chart")
   .attr("width", width + margin.left + margin.right)
   .attr("height", height + margin.top + margin.bottom)
   .append("g")
-  .attr("transform", `translate(${margin.left},${margin.top})`);
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Parse the Year / time
 const parseTime = d3.timeParse("%Y");
 
 // Load the CSV file
-d3.csv("share-plastic-waste-recycled.csv").then(data => {
+d3.csv("share-plastic-waste-recycled.csv", data => {
   data.forEach(d => {
     d.Year = parseTime(d.Year);
     d.Value = +d.Value;
@@ -46,17 +46,18 @@ d3.csv("share-plastic-waste-recycled.csv").then(data => {
     .domain(countries);
 
   // Group data by country
-  const dataByCountry = d3.groups(data, d => d.Country);
+  const dataByCountry = d3.nest()
+    .key(d => d.Country)
+    .entries(data);
 
   // Add the lines for each country
   svg.selectAll(".line")
     .data(dataByCountry)
-    .enter()
-    .append("path")
+    .enter().append("path")
     .attr("class", "line")
-    .attr("d", d => line(d[1]))
+    .attr("d", d => line(d.values))
     .style("fill", "none")
-    .style("stroke", d => color(d[0]))
+    .style("stroke", d => color(d.key))
     .style("stroke-width", "2.5px")
     .style("opacity", 0.7)
     .on("mouseover", function(event, d) {
@@ -70,7 +71,7 @@ d3.csv("share-plastic-waste-recycled.csv").then(data => {
   // Add the X Axis
   svg.append("g")
     .attr("class", "x-axis")
-    .attr("transform", `translate(0,${height})`)
+    .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).ticks(10).tickFormat(d3.timeFormat("%Y")))
     .selectAll("text")
     .style("fill", "white");  // Set text color to white
@@ -108,7 +109,7 @@ d3.csv("share-plastic-waste-recycled.csv").then(data => {
     .data(countries)
     .enter().append("g")
     .attr("class", "visual")
-    .attr("transform", (d, i) => `translate(${width + 20},${i * 20})`);
+    .attr("transform", (d, i) => "translate(" + (width + 20) + "," + (i * 20) + ")");
 
   legend.append("rect")
     .attr("x", 0)
