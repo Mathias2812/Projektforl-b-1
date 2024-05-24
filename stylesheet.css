@@ -1,8 +1,15 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+ }
 .box {
     margin-left: auto; 
             margin-right: auto; 
             width: 90%;
+<<<<<<< HEAD
+            height:850px; 
+=======
             height: 850px; 
+>>>>>>> origin/Sketch
             background-color: #2d545e;
             padding: 50px; 
             box-sizing: border-box; 
@@ -118,6 +125,32 @@ footer {
     color: aqua;
     text-shadow: 3px 3px 3px black;
 }
+<<<<<<< HEAD
+legend {
+    display: flex;
+    align-items: center;
+}
+
+.color-bar {
+    width: 1200 px; /* Juster bredden efter behov */
+    height: 30px;
+    background: linear-gradient(to right, #ffcccc, #ff0000); /* Juster farveskalaen efter behov */
+}
+
+.legend-text {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.legend-text span {
+    font-size: 20px;
+}
+
+#Mwi {
+    font-weight: bolder;
+}
+=======
 
 
 .quiz-container {
@@ -153,3 +186,4 @@ footer {
     text-align: auto;
     
 }
+>>>>>>> origin/Sketch
