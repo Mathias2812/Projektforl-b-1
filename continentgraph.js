@@ -32,7 +32,7 @@ d3.csv("share-plastic-waste-recycled.csv", data => {
   const countries = Array.from(new Set(data.map(d => d.Country)));
   console.log("Unique countries:", countries);
 
-  // Set the ranges
+  // Set the ranges 
   const x = d3.scaleTime().range([0, width]);
   const y = d3.scaleLinear().range([height, 0]);
 
@@ -117,19 +117,19 @@ svg.selectAll(".line")
     .text("Percentage of plastic recycled");
 
   // Add legend
-  const legend = svg.selectAll(".legend")
+  const visual = svg.selectAll(".visual")
     .data(countries)
     .enter().append("g")
     .attr("class", "visual")
     .attr("transform", (d, i) => "translate(" + (width + 20) + "," + (i * 20) + ")");
 
-  legend.append("rect")
+  visual.append("rect")
     .attr("x", 0)
     .attr("width", 18)
     .attr("height", 18)
     .style("fill", color);
 
-  legend.append("text")
+  visual.append("text")
     .attr("x", 24)
     .attr("y", 9)
     .attr("dy", ".35em")
