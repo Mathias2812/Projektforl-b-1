@@ -89,7 +89,6 @@ function drawMap(geoJsonData, worldData) {
                 .duration(500)
                 .style("opacity", 0);
         });
-        
 }
 
 
