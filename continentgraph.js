@@ -111,22 +111,25 @@
 
      // Add legend
      const legend = svg.selectAll(".legend")
-       .data(countries)
-       .enter().append("g")
-       .attr("class", "legend")
-       .attr("transform", (d, i) => `translate(${width + 20},${i * 20})`);
+     .data(countries)
+     .enter().append("g")
+     .attr("class", "legend")
+     .attr("transform", (d, i) => `translate(${width + 20},${i * 20})`);
+ 
+ legend.append("rect")
+     .attr("x", 0)
+     .attr("width", 18)
+     .attr("height", 18)
+     .style("fill", color);
+ 
+ legend.append("text")
+     .attr("x", 24)
+     .attr("y", 9)
+     .attr("dy", ".35em")
+     .style("font-size", "12px")
+     .attr("class", "legend-text") // Add a class here
+     .text(d => d);
 
-     legend.append("rect")
-       .attr("x", 0)
-       .attr("width", 18)
-       .attr("height", 18)
-       .style("fill", color);
-
-     legend.append("text")
-       .attr("x", 24)
-       .attr("y", 9)
-       .attr("dy", ".35em")
-       .style("font-size", "12px")
-       .text(d => d);
+     svg.selectAll(".legend-text").style("fill", "white");
    }
  });
