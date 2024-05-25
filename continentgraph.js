@@ -66,11 +66,11 @@
        .style("stroke-width", "2.5px")
        .style("opacity", 0.7)
        .on("mouseover", function(event, d) {
-         d3.selectAll(".line").style("opacity", 0.1);
-         d3.select(this).style("opacity", 1).style("stroke-width", "4px");
-       })
-       .on("mouseout", function(event, d) {
-         d3.selectAll(".line").style("opacity", 0.7).style("stroke-width", "2.5px");
+        d3.selectAll(".line").style("opacity", 0.1);
+        d3.select(this).style("opacity", 1).style("stroke-width", "4px");
+      })
+      .on("mouseout", function(event, d) {
+        d3.selectAll(".line").style("opacity", 0.7).style("stroke-width", "2.5px");
        });
 
      // Add the X Axis
@@ -110,19 +110,19 @@
        .text("Percentage of plastic recycled");
 
      // Add legend
-     const visual = svg.selectAll(".visual")
+     const legend = svg.selectAll(".legend")
        .data(countries)
        .enter().append("g")
        .attr("class", "legend")
        .attr("transform", (d, i) => `translate(${width + 20},${i * 20})`);
 
-     visual.append("rect")
+     legend.append("rect")
        .attr("x", 0)
        .attr("width", 18)
        .attr("height", 18)
        .style("fill", color);
 
-     visual.append("text")
+     legend.append("text")
        .attr("x", 24)
        .attr("y", 9)
        .attr("dy", ".35em")
