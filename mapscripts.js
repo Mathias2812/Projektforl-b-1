@@ -1,3 +1,5 @@
+console.log("Script loaded");
+
 const apiUrl = 'http://localhost:4000/Data';
 let worldData = [];
 
@@ -20,7 +22,7 @@ fetch(apiUrl)
         console.error('Error:', error);
     });
 
-     // We load in our data and our world map here
+// We load in our data and our world map here
 function loadGeoJsonAndDrawMap() {
     d3.queue()
         .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
@@ -29,6 +31,7 @@ function loadGeoJsonAndDrawMap() {
             drawMap(geoJsonData, worldData);
         });
 }
+
 function drawMap(geoJsonData, worldData) {
     let svgWidth = 1200;
     let svgHeight = 600;
@@ -41,12 +44,14 @@ function drawMap(geoJsonData, worldData) {
         .center([0, 20])
         .translate([svgWidth / 2, svgHeight / 2]);
 
-        let colorScale = d3.scaleLinear()
+    let colorScale = d3.scaleLinear()
         .domain(d3.extent(worldData, d => d.mwi_value))
-        .range(["#ffcccc", "#ff0000"]); 
+        .range(["#ffcccc", "#ff0000"]);
 
     let dataMap = new Map(worldData.map(d => [d.country_code, d]));
 
+    // Select tooltip element
+    let tooltip = d3.select(".tooltip");
 
     svg.append("g")
         .selectAll("path")
@@ -62,16 +67,28 @@ function drawMap(geoJsonData, worldData) {
         .attr("class", "Country")
         .style("opacity", .8)
         .on("mouseover", function(event, d) {
+            console.log("Mouseover event triggered"); // Debugging line
             d3.select(this).style("opacity", 1);
             let countryData = dataMap.get(d.id);
             if (countryData) {
-                console.log(`Country: ${countryData.country_name}, MWI Value: ${countryData.mwi_value}, Total Waste: ${countryData.total_waste}`);
-                // Display a tooltip or other UI element with country data here
+                console.log(countryData); // Debugging line
+                // Update tooltip content and position
+                tooltip.html(`Country: ${countryData.country_name}<br>MWI Value: ${countryData.mwi_value}<br>Total Waste: ${countryData.total_waste}`)
+                    .style("left", (event.pageX) + "px")
+                    .style("top", (event.pageY - 28) + "px")
+                    .transition()
+                    .duration(200)
+                    .style("opacity", .9); // Show tooltip
             }
         })
         .on("mouseleave", function() {
+            console.log("Mouseleave event triggered"); // Debugging line
             d3.select(this).style("opacity", .8);
+            // Hide tooltip on mouse leave
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
         });
-        
 }
+
 

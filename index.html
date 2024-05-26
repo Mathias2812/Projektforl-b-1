@@ -8,6 +8,7 @@
     <script src="http://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
 <!--  Navigation bar goes here -->
@@ -34,7 +35,8 @@
 
 
 <!--  World map goes here -->
-    <div class="box">   
+    <div class="box">
+        <div class="tooltip"></div>   
        <div class="worldMap"> 
         <svg id="my_data" width="300" height="400"></svg>
         <div class="legend">
@@ -51,7 +53,6 @@
         <p id="MwiText"> Sum of uncollected and improperly managed waste, divided by the waste generated.</p>
         </div>
     </div>
-
     
 <!-- top 5 and facts section goes here-->
 <div class="box2">
@@ -86,7 +87,12 @@
 
 <!-- Graph goes here-->
 <div class="graphBox">
-    <div class="graph"></div>
+    <div class="graph">
+        <div id="chart"></div>
+    <div>
+    </div>
+        <script src="continentgraph.js"></script>
+    </div>
 </div>
 
 <!-- True / False quiz goes here-->
@@ -118,45 +124,7 @@
 
 
 
-
-
-
-
-
-
-
-    
-
-    <div id="test"></div>
-    <script>
-       /* // Specify the API endpoint for food
-        const apiUrl = 'http://localhost:4000/Data';
-
-        // Make a GET request using the Fetch API
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(Data => {
-                // Process the retrieved foods
-                let html = '';
-                Data.forEach(Country => {
-                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
-                    console.log(Country);
-                });
-                document.getElementById("test").innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });*/
-
-    </script>
-
-
-<script src="scripts.js" type="module"></script>
+<script src="mapscripts.js"></script>
 <script>src="carousel.js"</script>  
 </body>
 </html>
