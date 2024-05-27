@@ -10,7 +10,7 @@ body {
     margin-left: auto; 
             margin-right: auto; 
             width: 90%;
-            height: 850px; 
+            height: 950px; 
             background-color: #2d545e;
             padding: 50px; 
             box-sizing: border-box; 
@@ -144,6 +144,16 @@ legend {
 
 #Mwi {
     font-weight: bolder;
+}
+
+#maptext {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    font-size: larger;
+    text-shadow: 1px 1px 1px rgb(105, 105, 105);
+    text-align: center;
+    
 }
 
 
