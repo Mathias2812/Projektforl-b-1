@@ -1,64 +1,64 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #83BDE3;
  }
-.box {
+
+ .box {
     margin-left: auto; 
             margin-right: auto; 
-            width: 90%;
-            height: 850px; 
-            background-color: #2d545e;
+            width: 75%;
+            height: 800px; 
+            background-color: #D8DBDE;
             padding: 50px; 
             box-sizing: border-box; 
-            margin-bottom: 50px;
+            margin-bottom: 200px;
             margin-top: 25px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             border: 3px solid black;
 }
-#headlineTop {
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    
-}
 
 h1 {
     text-align: center;
 }
-nav {   
-    text-align: center;
-}
-footer {
-    text-align: center;
-}
 
-
+/* Container for barchart and infobox*/
 .box2 {
-    display: flex;
-    text-align: center;
-}
-
-/* Styling for top5 barchart and factbox*/
-.top5, .infoBox {
-    background-color: #2d545e;
-    width: 43.7%;
-    height: 700px;
+    background-color: #127ABE;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; 
-    display: block;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
     border: 3px solid black;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
 }
 
-.top5 {
-    margin-right: 20px;
-    text-align: center;
-    position: relative;
+.chartcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
-.factBox {
-    margin-left: 20px;
+
+.top5, .infoBox {
+    background-color: #127ABE;
+    width: 48%;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 3px solid black;
     text-align: center;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
+
+/*
 .worldMap {
     margin-left: auto; 
     margin-right: auto; 
@@ -68,15 +68,16 @@ footer {
     padding: 10px; 
     box-sizing: border-box; 
     border-radius: 10px;
-}
+    border: 3px solid black;
+}*/
 
-
+/* Box for line graph*/
 .graphBox {
     margin-left: auto; 
     margin-right: auto; 
     width: 90%;
     height: 600px; 
-    background-color: #2d545e; 
+    background-color: #127ABE; 
     padding: 100px; 
     box-sizing: border-box; 
     margin-bottom: 20px;
@@ -86,25 +87,16 @@ footer {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     border: 3px solid black;
 
-    
-}
-.navBar {
-    top: 0;
-    left: 0; 
-    width: 100%; 
-    padding: 5px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
-    border-bottom: 1px solid black;
-    height: 75px;
+
 }
 
+/* Container for line graph */
 .box3 {
     margin-left: auto; 
     margin-right: auto; 
     width: 90%;
     height: 600px; 
-    background-color: #2d545e; 
+    background-color: #127ABE; 
     padding: 100px; 
     box-sizing: border-box; 
     margin-bottom: 20px;
@@ -137,9 +129,9 @@ legend {
 }
 
 .color-bar {
-    width: 1200 px; /* Juster bredden efter behov */
+    width: 1200 px; 
     height: 30px;
-    background: linear-gradient(to right, #ffcccc, #ff0000); /* Juster farveskalaen efter behov */
+    background: linear-gradient(to right, #ffcccc, #ff0000); 
 }
 
 .legend-text {
@@ -152,8 +144,17 @@ legend {
     font-size: 20px;
 }
 
+/* Displays info about the world map*/
+
 #Mwi {
     font-weight: bolder;
+    color: black;
+}
+
+/*  Also displays info about the world map*/
+#MwiText {
+    font-weight: bolder;
+    color: black; 
 }
 
 
@@ -173,14 +174,8 @@ legend {
     align-items:center;
     justify-content: center;
 }
-.button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    font-size: 1em;
-    cursor: pointer;
+
     
-}
 .score, .explanation, .feedback {
     margin-top: 4   0px;
     font-size: 1.2em;
@@ -202,27 +197,10 @@ legend {
 
 
 
-#top5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-bottom: 100px;
-    flex-direction: column;
-  }
 
-/*Mwi button*/
-#mwiOutliers {
-    position: absolute;
-    bottom: 5px;
-    left: 250px;
-}
-/*Total Waste button*/
-#wasteOutliers {
-    position: absolute;
-    bottom: 5px;
-    left: 330px; /* Adjusted position to prevent overlapping */
-}
+
+
+
 
 .button {
       appearance: none;
@@ -284,6 +262,8 @@ legend {
 #top5Heading {
     text-align: center; 
     margin-top: 5px;
+    font-size: 35px;
+    color: white;
 
 }
 #top5Description {
@@ -294,6 +274,7 @@ legend {
 #infoboxHeading {
     color: white;
     margin-top: 20px;
+    font-size: 35px;
 }
 p {
     color: white;
@@ -301,17 +282,13 @@ p {
 }
 
 #coverimageContainer {
+    position: relative;
     width: 100%;
-    height: 90vh; 
-    background-image: url('https://images.axios.com/zdWjyhSeVL0oz2CEvxV_sjujGWw=/0x141:2896x1770/1920x1080/2021/06/10/1623366900398.jpg');
+    height: 100vh; 
+    background-image: url('https://images.axios.com/zdWjyhSeVL0oz2CEvxV_sjujGWw=/0x141:2896x1770/1920x1080/2021/06/10/1623366900398.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 50px;
-    padding: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    
 }
 
 #coverimageText {
@@ -322,14 +299,11 @@ p {
     color: white; 
     font-size: 70px; 
     text-align: center; 
-    font-weight: bold;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 #textbeforeMap {
@@ -337,4 +311,21 @@ body {
     margin-right: 45px;
     margin-left: 45px;
     text-align: center;
+}
+.font {
+    font-family: serif;
+}
+.heading {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: serif;
+}
+.p {
+    font-family: Arial;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }

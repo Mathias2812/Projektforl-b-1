@@ -1,0 +1,12 @@
+Entity,Code,Year,Share of waste recycled from total regional waste,Share of waste incinerated from total regional waste,Share of littered and mismanaged from total regional waste,Share of waste landfilled from total regional waste
+
+Americas (excl. USA),,2019,9.554245,1.1592599,29.180883,60.10561
+Asia (excl. China and India),,2019,8.351267,18.513683,33.74583,39.38922
+China,CHN,2019,12.801141,23.762764,27.052067,36.384026
+Europe,,2019,12.384406,37.74739,5.667553,44.200645
+India,IND,2019,13.333093,4.1608157,46.214355,36.29173
+Middle East & North Africa,,2019,5.4478326,0.6075314,39.797066,54.14757
+Oceania,,2019,6.8709826,11.508256,6.7546487,74.86611
+Sub-Saharan Africa,,2019,5.7193336,0.5053036,63.607426,30.167952
+United States,USA,2019,4.488883,19.078592,3.552523,72.880005
+World,OWID_WRL,2019,9.292344,19.048033,22.45448,49.205143

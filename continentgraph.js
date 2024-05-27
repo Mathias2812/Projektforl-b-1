@@ -1,3 +1,5 @@
+(function() {
+
 // Set the dimensions and margins of the graph
 const margin = { top: 20, right: 250, bottom: 100, left: 50 },
   width = 1200 - margin.left - margin.right,
@@ -149,3 +151,5 @@ Papa.parse("share-plastic-waste-recycled.csv", {
     svg.selectAll(".legend-text").style("fill", "white");
   },
 });
+
+})();
