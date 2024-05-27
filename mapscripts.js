@@ -44,9 +44,12 @@ function drawMap(geoJsonData, worldData) {
         .center([0, 20])
         .translate([svgWidth / 2, svgHeight / 2]);
 
-    let colorScale = d3.scaleLinear()
+        let colorScale = d3.scaleLinear()
         .domain(d3.extent(worldData, d => d.mwi_value))
-        .range(["#ffcccc", "#ff0000"]);
+        .range(["#81d4fa", "#01579b"]); // Slightly darker blue shades
+    
+    
+    
 
     let dataMap = new Map(worldData.map(d => [d.country_code, d]));
 
