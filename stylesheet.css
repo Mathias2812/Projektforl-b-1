@@ -358,13 +358,10 @@ legend {
     width: 100%;
 }
 #graphHeading {
-    text-align: center; 
-    margin: 0 auto; 
-    margin-bottom: 120px;
-    color: white; 
-    width: 100%; 
-    padding-top: 5px;
-    font-size: 30px; 
+    color: white;
+    margin-top: 20px;
+    font-size: 35px;
+    font-style: Times New Roman;
 }
 
 .whiteText {
