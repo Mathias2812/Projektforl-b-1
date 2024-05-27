@@ -4,7 +4,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #83BDE3;
+    background-color: #d1e4f0;
  }
 .box {
     margin-left: auto; 
@@ -90,15 +90,6 @@ footer {
     border: 3px solid black;
 
     
-}
-.navBar {
-    top: 0;
-    left: 0; 
-    width: 100%; 
-    padding: 5px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
-    border-bottom: 1px solid black;
 }
 
 .box3 {
