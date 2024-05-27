@@ -24,7 +24,7 @@ body {
     text-align: center;
     font-weight: bold;
     text-shadow: 1px 0px 1px rgb(105, 105, 105);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
 
@@ -46,11 +46,11 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px auto;
-    width: 90%;
-    display: flex; /* Use flexbox for layout */
+    width: 88%;
+    display: flex; 
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .top5, .infoBox {
@@ -76,6 +76,7 @@ footer {
         color: white;
         margin-top: 20px;
         font-size: 35px;
+        font-family:  'Times New Roman', Times, serif;
 
 }
 
@@ -83,7 +84,7 @@ footer {
     color: white;
     margin-top: 20px;
     font-size: 35px;
-    font-style: Times New Roman;
+    font-family:  'Times New Roman', Times, serif;
 }
 
 .worldMap {
@@ -337,14 +338,7 @@ legend {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
-.heading {
-    font: Tahoma;
-    font-weight: bolder;
-    font-size: larger;
-    font-style: Tahoma;
-    text-shadow: 1px 1px 1px rgb(105, 105, 105);
 
-}
 
 .chartcontainer {
     display: flex;
@@ -355,7 +349,7 @@ legend {
     color: white;
     margin-top: 20px;
     font-size: 35px;
-    font-style: Times New Roman;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .whiteText {
@@ -377,4 +371,9 @@ legend {
 b {
     font-size: larger;
     font-weight: bolder;
+}
+
+#border {
+    border-bottom: 2px solid #01579b;
+    margin-top: 48px;
 }
