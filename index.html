@@ -46,22 +46,19 @@
 <div class="box2">
     <div class="chartcontainer">
         <div class="top5" id="top5"> 
-            <h1 class="heading" id="top5Heading">Discover the biggest plastic waste sinners!</h1>
-            <p id="top5Description">Choose between percentage of plastic waste mismanaged and total plastic waste generated</p>
+            <h1 id="top5Heading">Discover the biggest plastic waste sinners!</h1>
             <!-- Loading barchart script -->
             <div id="barchart"></div>
             <script src="barchart.js"></script>
-            <!-- 2 buttons that change the datasets for the barchart -->
-            <button onclick="update(mwiOutliers)" id="mwiOutliers" class="button">MWI</button>
-            <button onclick="update(wasteOutliers)" id="wasteOutliers" class="button">Total Waste</button>    
+            <!-- 2 buttons that change the datasets for the barchart -->  
         </div>
         <div class="infoBox">
             <h1 class="heading" id="infoboxHeading"> Why is plastic waste such a struggle in these countries? </h1>
-            <p>The bar chart reveals that both the Solomon Islands and Suriname mismanage <b>100%</b> of their plastic waste, with Mozambique, Madagascar, and Uganda following closely behind.
+            <p class="whiteText">The bar chart reveals that both the Solomon Islands and Suriname mismanage <b>100%</b> of their plastic waste, with Mozambique, Madagascar, and Uganda following closely behind.
                 This indicates that all plastic waste produced in these countries ends up as litter, in landfills, or in the ocean. 
             </p>
             <br>
-            <p>
+            <p class="whiteText">
                 Additionally, the world map highlights that African and other developing nations generally <b>have high MWI scores</b>, significantly contributing to the global plastic problem. However, the rest of the world generally scores low, hinting that they might have better resources to manage their plastic waste.
                 Consequently, it appears there is <b>still some way to go </b> to achieve the UN's 2030 goal of reducing environmental impact by focusing on improved waste management.
             </p>
@@ -70,6 +67,7 @@
 </div>
 
 <div class="graphBox">
+    <h1 id="graphHeading">Only <b>9%</b> of the worlds plastic waste is recycled</h1>
     <div class="graph">
         <div id="chart"></div>
     <div>

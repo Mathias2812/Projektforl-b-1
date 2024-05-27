@@ -1,3 +1,5 @@
+(function() {
+
 console.log("Script loaded");
 
 const apiUrl = 'http://localhost:4000/Data';
@@ -95,4 +97,4 @@ function drawMap(geoJsonData, worldData) {
         });
 }
 
-
+ })();
