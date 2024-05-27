@@ -32,6 +32,7 @@ function loadGeoJsonAndDrawMap() {
         });
 }
 
+// Drawing the map
 function drawMap(geoJsonData, worldData) {
     let svgWidth = 1200;
     let svgHeight = 600;
