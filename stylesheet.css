@@ -14,7 +14,7 @@ body {
             padding: 50px; 
             box-sizing: border-box; 
             margin-bottom: 50px;
-            margin-top: 150px;
+            margin-top: 50px;
             border-radius: 10px;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     
@@ -46,7 +46,7 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px auto;
-    width: 90%;
+    width: 87%;
     display: flex; /* Use flexbox for layout */
     justify-content: space-between;
     align-items: flex-start;
@@ -107,7 +107,7 @@ footer {
     padding: 100px; 
     box-sizing: border-box; 
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 70px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -124,7 +124,7 @@ footer {
     padding: 100px; 
     box-sizing: border-box; 
     margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 70px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -322,6 +322,11 @@ legend {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+#border {
+    border-bottom: solid 3px #88a6c4;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #coverimageText {
