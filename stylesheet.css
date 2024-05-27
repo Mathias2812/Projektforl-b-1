@@ -226,4 +226,5 @@ legend {
     font-weight: bolder;
     font-size: larger;
     font-style: Tahoma;
+    text-shadow: 1px 1px 1px rgb(105, 105, 105);
 }
