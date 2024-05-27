@@ -144,7 +144,7 @@
         .attr("x", 24)
         .attr("y", 9)
         .attr("dy", ".35em")
-        .style("font-size", "12px")
+        .style("font-size", "17px")
         .attr("class", "legend-text") // Add a class here
         .text((d) => d);
   
