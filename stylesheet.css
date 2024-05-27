@@ -1,5 +1,4 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -24,7 +23,8 @@ body {
     font-size: 30px;
     text-align: center;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgb(105, 105, 105);
+    text-shadow: 1px 0px 1px rgb(105, 105, 105);
+    font-family: 'Courier New', Courier, monospace;
     
 }
 
@@ -176,8 +176,9 @@ legend {
     justify-content: space-between;
     margin-left: 10px;
     font-size: larger;
-    text-shadow: 1px 1px 1px rgb(105, 105, 105);
+    text-shadow: 1px 0px 1px rgb(105, 105, 105);
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
     
 }
 
