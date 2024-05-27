@@ -105,7 +105,7 @@
       // Add X Axis label
       svg.append("text")
         .attr("x", width / 2)
-        .attr("y", height + 40)
+        .attr("y", height + 35)
         .style("fill", "white")
         .attr("text-anchor", "middle")
         .attr("font-size", "17px")
@@ -115,7 +115,7 @@
       // Add Y Axis label
       svg.append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", -40)
+        .attr("y", -35)
         .attr("x", -height / 2)
         .style("fill", "white")
         .attr("text-anchor", "middle")
