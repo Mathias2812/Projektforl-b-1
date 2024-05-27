@@ -141,7 +141,7 @@ legend {
 .color-bar {
     width: 1200 px; /* Juster bredden efter behov */
     height: 30px;
-    background: linear-gradient(to right, #ffcccc, #ff0000); /* Juster farveskalaen efter behov */
+    background: linear-gradient(to right,#81d4fa, #01579b); /* Juster farveskalaen efter behov */
 }
 
 .legend-text {
