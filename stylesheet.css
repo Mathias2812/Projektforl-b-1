@@ -44,7 +44,7 @@ footer {
     text-align: center;
 }
 
-.top5, .factBox {
+.top5, .infoBox {
     background-color: #2d545e;
     width: 43.7%;
     height: 600px;
@@ -58,9 +58,16 @@ footer {
     margin-right: 20px;
     text-align: center;
 }
-.factBox {
+.infoBox {
     margin-left: 20px;
     text-align: center;
+
+}
+#infoboxHeading {
+        color: white;
+        margin-top: 20px;
+        font-size: 35px;
+
 }
 .worldMap {
     margin-left: auto; 
