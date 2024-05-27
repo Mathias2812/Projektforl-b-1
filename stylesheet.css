@@ -184,12 +184,48 @@ legend {
 }
 .question {
     font-size: 1.2em;
+    font-weight: bolder;
 }
-.buttons{
+.quizbuttons{
     display: flex;
     align-items:center;
     justify-content: center;
 }
+.quizbutton {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+    .next-button {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    .correct {
+        color: rgb(0, 255, 0);
+    }
+    
+    .wrong {
+        color: red;
+    }
+    
+    .score, .explanation, .feedback {
+        margin-top: 4   0px;
+        font-size: 1.2em;
+    }
+
+    #question, #explanation, #score {
+        color: rgb(255, 255, 255);
+    }
+    
+    #box3Heading {
+        margin-top: auto;
+        text-align: auto;
+    }
 .button {
     appearance: none;
     background-color: #FAFBFC;
@@ -245,14 +281,8 @@ legend {
     display: none;
   }
 
-.score, .explanation, .feedback {
-    margin-top: 4   0px;
-    font-size: 1.2em;
-}
-#box3Heading {
-    margin-top: auto;
-    text-align: auto;
-}
+
+
 .tooltip {
     position: absolute;
     background: #fff;
