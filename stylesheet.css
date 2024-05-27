@@ -136,14 +136,14 @@ footer {
 #box3Heading {
     font-size: 30px;
     margin-bottom: 20px;  
-    color: aqua;
+    color: rgb(66, 207, 207);
     text-shadow: 3px 3px 3px black;
 }
 
 #box3text {
-    margin-top: auto;
+    margin-top: auto;   
     text-align: auto;
-    color: aqua;
+    color: white;
     text-shadow: 3px 3px 3px black;
 }
 legend {
