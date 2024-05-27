@@ -229,3 +229,9 @@ legend {
     font-style: Tahoma;
     text-shadow: 1px 1px 1px rgb(105, 105, 105);
 }
+
+.chartcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
