@@ -66,7 +66,7 @@
         .attr("class", "line")
         .style("fill", "none")
         .style("stroke", (d) => color(d.key))
-        .style("stroke-width", "2.5px")
+        .style("stroke-width", "5.5px")
         .style("opacity", 0) // Initial opacity to 0
         .attr("d", (d) => line(d.values));
   
