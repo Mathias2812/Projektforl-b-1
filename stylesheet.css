@@ -53,7 +53,7 @@ footer {
     margin-bottom: 70px;
 }
 
-.top5, .infoBox {
+.visual, .infoBox {
     background-color: #3d507a;
     width: 43.7%;
     height: 650px;
@@ -398,4 +398,17 @@ b {
 .border {
     border-bottom: 2px solid #8fb3ce;
     margin-top: 48px;
+}
+
+#barplot{
+    display: flex;
+    align-items: center;
+    margin: 0, auto;
+
+}
+
+#barLegend {
+    margin-top: 20px;
+    text-align: center; 
+    display: flex;
 }

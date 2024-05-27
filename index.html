@@ -9,6 +9,8 @@
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 <body>
 
@@ -47,7 +49,7 @@
 <!-- top 5 and info section goes here-->
 <div class="box2">
     <div class="chartcontainer">
-        <div class="top5" id="top5"> 
+        <div class="visual" id="top5"> 
             <h1 id="top5Heading">Discover the biggest plastic waste sinners!</h1>
             
             <!-- Loading barchart script -->
@@ -85,6 +87,25 @@
             <p>United States scoring the <b>lowest with about 4%</b>, ranking lower than Sub-Saharan Africa, and Middle East & North Africa. India and China scoring highest at around <b>13%</b></p>
         </div>
     </div>
+</div>
+
+
+<div class="box2">
+        <div class="chartcontainer">
+            <div class="visual" id="barplot">
+
+<!-- Script here -->
+            <script src="stackedbarplot.js"></script>
+            <div id="barLegend"></div>
+            </div> 
+            
+            <div class="infoBox">
+
+<!-- Text goes here -->
+
+            </div>
+        </div>
+
 </div>
 
 
