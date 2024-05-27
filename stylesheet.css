@@ -346,6 +346,7 @@ legend {
 #graphHeading {
     color: white;
     margin-top: 20px;
+    margin-bottom: 100px;
     font-size: 35px;
     font-family: 'Times New Roman', Times, serif;
 }
