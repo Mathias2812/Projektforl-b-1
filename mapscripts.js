@@ -73,12 +73,6 @@ function drawMap(geoJsonData, worldData) {
         .attr("class", "Country")
         .style("opacity", .8)
         .on("mouseleave", function() {
-            console.log("Mouseleave event triggered"); // Debugging line
-            d3.select(this).style("opacity", .8);
-            // Hide tooltip on mouse leave
-            tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
         });
 }
  })();
