@@ -55,7 +55,7 @@ d3.csv("share-plastic-fate.csv", function(data) {
     
     // Create color legend
 let legend = d3.select("#barLegend")
-.append("svg")
+.append(svg)
 .attr("class", "legend")
 .attr("transform", "translate(" + (width - 150) + "," + (margin.top + 10) + ")");
 
