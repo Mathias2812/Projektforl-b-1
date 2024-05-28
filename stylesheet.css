@@ -405,9 +405,10 @@ b {
 .border {
     border-bottom: 2px solid #8fb3ce;
     margin-top: 48px;
+    margin-bottom: 20px;
 }   
 html {scroll-behavior: smooth;}
 
 #marginbutton {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
