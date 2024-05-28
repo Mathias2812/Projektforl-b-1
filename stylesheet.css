@@ -134,6 +134,10 @@ footer {
     display: block;
 }
 
+.visual {
+    width: 50.7%;
+}
+
 .top5 {
     margin-right: 20px;
     text-align: center;
@@ -141,8 +145,6 @@ footer {
 .infoBox {
     margin-left: 20px;
     text-align: center;
-
-
 }
 #infoboxHeading {
         color: white;
