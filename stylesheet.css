@@ -115,6 +115,7 @@ footer {
     margin-bottom: 70px;
 }
 
+
 .chartcontainer {
     display: flex;
     justify-content: space-between;
@@ -123,7 +124,7 @@ footer {
 
 /*Styling of each box displaying chart and info*/
 
-.top5, .infoBox {
+.visual, .infoBox {
     background-color: #3d507a;
     width: 43.7%;
     height: 650px;
@@ -417,3 +418,21 @@ html {scroll-behavior: smooth;}
 #marginbutton {
     margin-bottom: 20px;
 }
+
+
+#barplot{
+    display: flex;
+    align-items: center;
+    margin: 0, auto;
+
+}
+
+#barLegend {
+    margin-top: 20px;
+    text-align: center; 
+    display:flexbox;
+}
+
+#barplot svg .axis-x text {
+    fill: white; /* Set the text color to white */
+  }
