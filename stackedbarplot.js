@@ -1,6 +1,6 @@
 (function() {
   // set the dimensions and margins of the graph
-  const margin = {top: 10, right: 30, bottom: 60, left: 50}, // Adjusted bottom margin for space for the legend
+  const margin = {top: 10, right: 30, bottom: 125, left: 50}, // Adjusted bottom margin for space for the legend
         width = 660 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
@@ -33,20 +33,23 @@
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x).tickSizeOuter(0))
       .selectAll("text")
-      .style("text-overflow", "ellipsis")
-      .style("overflow", "hidden")
-      .style("white-space", "nowrap")
-      .style("fill","white")
-      .text(function(d) {
-          return d.length > 10 ? d.substring(0, 10) + "..." : d;
-        });
+      .style("text-anchor", "end") // Adjust text-anchor to end
+      .attr("dx", "-0.5em") // Adjust the position to move the text a bit to the left
+      .attr("dy", "0.15em") // Adjust vertical position to align with the axis
+      .attr("transform", "rotate(-45)") // Rotate the text
+      .style("fill", "white");
 
-    // Add Y axis
+    // Add Y axis with percentage format
     let y = d3.scaleLinear()
       .domain([0, 100])
       .range([ height, 0 ]);
+
+    // Define format for y-axis ticks as percentages
+    let yAxis = d3.axisLeft(y).tickFormat(d => d + "%");
+
+    // Append Y axis to SVG
     svg.append("g")
-      .call(d3.axisLeft(y))
+      .call(yAxis)
       .selectAll("text")
       .style("fill","white");
 
@@ -105,7 +108,7 @@
 
     // Add the legend
     let legend = svg.append("g")
-      .attr("transform", "translate(0," + (height + 45) + ")"); // Adjusted position to move the legend further down
+      .attr("transform", "translate(" + ((width - subgroups.length * 100) / 2) + "," + (height + 110) + ")"); // Centered the legend horizontally
 
     legend.selectAll("rect")
       .data(subgroups)
@@ -127,4 +130,3 @@
         .text(function(d) { return d; });
   });
 })();
-
