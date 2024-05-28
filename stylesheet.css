@@ -118,8 +118,9 @@ footer {
 
 .chartcontainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+
 }
 
 /*Styling of each box displaying chart and info*/
@@ -146,7 +147,7 @@ footer {
     margin-left: 20px;
     text-align: center;
 }
-#infoboxHeading {
+.infoboxHeading {
         color: white;
         margin-top: 20px;
         font-size: 35px;
@@ -426,7 +427,7 @@ html {scroll-behavior: smooth;}
     display: flex;
     align-items: center;
     margin: 0, auto;
-
+    position: relative;
 }
 
 #barLegend {
@@ -438,3 +439,18 @@ html {scroll-behavior: smooth;}
 #barplot svg .axis-x text {
     fill: white; /* Set the text color to white */
   }
+
+  #barplotHeading {
+    color: white;
+    margin-top: 20px;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    position: absolute;
+    top: 5px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; 
+    display: inline-block; 
+    vertical-align: top; 
+}

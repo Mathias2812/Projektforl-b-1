@@ -1,6 +1,6 @@
 (function() {
   // set the dimensions and margins of the graph
-  const margin = {top: 10, right: 30, bottom: 125, left: 50}, // Adjusted bottom margin for space for the legend
+  const margin = {top: 40, right: 30, bottom: 125, left: 50}, // Adjusted bottom margin for space for the legend
         width = 660 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
