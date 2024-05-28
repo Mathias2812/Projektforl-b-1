@@ -72,21 +72,6 @@ function drawMap(geoJsonData, worldData) {
         .style("stroke", "black")
         .attr("class", "Country")
         .style("opacity", .8)
-        .on("mouseover", function(event, d) {
-            console.log("Mouseover event triggered"); // Debugging line
-            d3.select(this).style("opacity", 1);
-            let countryData = dataMap.get(d.id);
-            if (countryData) {
-                console.log(countryData); // Debugging line
-                // Update tooltip content and position
-                tooltip.html(`Country: ${countryData.country_name}<br>MWI Value: ${countryData.mwi_value}<br>Total Waste: ${countryData.total_waste}`)
-                    .style("left", (event.pageX) + "px")
-                    .style("top", (event.pageY - 28) + "px")
-                    .transition()
-                    .duration(200)
-                    .style("opacity", .9); // Show tooltip
-            }
-        })
         .on("mouseleave", function() {
             console.log("Mouseleave event triggered"); // Debugging line
             d3.select(this).style("opacity", .8);
@@ -96,5 +81,4 @@ function drawMap(geoJsonData, worldData) {
                 .style("opacity", 0);
         });
 }
-
  })();
