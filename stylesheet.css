@@ -410,5 +410,9 @@ b {
 #barLegend {
     margin-top: 20px;
     text-align: center; 
-    display: flex;
+    display:flexbox;
 }
+
+#barplot svg .axis-x text {
+    fill: white; /* Set the text color to white */
+  }
