@@ -151,6 +151,7 @@ footer {
     margin-top: 20px;
     font-size: 30px;
     font-family:  'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 /* Container to hold the graph and text side by side */
