@@ -1,5 +1,4 @@
 (function() {
-
   // Set the dimensions and margins of the graph
   const margin = { top: 20, right: 250, bottom: 100, left: 50 },
     width = 1200 - margin.left - margin.right,
@@ -59,7 +58,7 @@
         .entries(data);
   
       // Add the lines for each country with initial opacity 0
-      svg.selectAll(".line")
+      const lines = svg.selectAll(".line")
         .data(dataByCountry)
         .enter()
         .append("path")
@@ -75,11 +74,20 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // If element is in view, trigger the animation
-            svg.selectAll(".line")
-              .transition()
+            lines.transition()
               .duration(1500) // Duration of the transition
               .delay((d, i) => i * 500) // Delay for each line
-              .style("opacity", 0.7); // Final opacity after transition
+              .style("opacity", 0.7) // Final opacity after transition
+              .on("end", () => { // Add hover interactions after animation ends
+                lines
+                  .on("mouseover", function(event, d) {
+                    d3.selectAll(".line").style("opacity", 0.1);
+                    d3.select(this).style("opacity", 1).style("stroke-width", "7.5px");
+                  })
+                  .on("mouseout", function(event, d) {
+                    d3.selectAll(".line").style("opacity", 0.7).style("stroke-width", "5.5px");
+                  });
+              });
           }
         });
       });
@@ -151,6 +159,4 @@
       svg.selectAll(".legend-text").style("fill", "white");
     },
   });
-  
-  })();
-  
+})();

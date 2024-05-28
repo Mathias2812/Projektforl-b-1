@@ -6,11 +6,52 @@ body {
     background-color: #d1e4f0;
     font-family:  'Times New Roman', Times, serif;
  }
+
+ h1 {
+    text-align: center;
+}
+footer {
+    text-align: center;
+}
+
+/*Styling for landing page image*/
+
+#coverimageContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('https://www.undp.org/sites/g/files/zskgke326/files/migration/pacific/file_171.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#coverimageText {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    font-size: 70px; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+
+ /* Styling for worldmap container*/
 .box {
     margin-left: auto; 
             margin-right: auto; 
             width: 90%;
-            height: 1015px; 
+            height: 1025px; 
             background-color: #3d507a;
             padding: 50px; 
             box-sizing: border-box; 
@@ -20,6 +61,7 @@ body {
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     
 }
+/*Styling for headline in worldmap viz*/
 #headlineTop {
     font-size: 30px;
     text-align: center;
@@ -27,17 +69,37 @@ body {
     
 }
 
-h1 {
-    text-align: center;
-}
-nav {   
-    text-align: center;
-}
-footer {
-    text-align: center;
+.worldMap {
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 95%;
+    height: 100%; 
+    background-color: white;
+    padding: 10px; 
+    box-sizing: border-box; 
+    border-radius: 10px;
 }
 
+#Mwi {
+    font-weight: bolder;
+}
 
+#maptext {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    font-size: larger;
+    text-align: center;
+    font-family:  'Times New Roman', Times, serif;
+    
+}
+
+#MwiNoData {
+    font-size: 12px;
+
+}
+
+/* Styling container for barchart*/
 .box2 {
     display: flex;
     text-align: center;
@@ -52,6 +114,15 @@ footer {
     flex-wrap: wrap; 
     margin-bottom: 70px;
 }
+
+
+.chartcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*Styling of each box displaying chart and info*/
 
 .visual, .infoBox {
     background-color: #3d507a;
@@ -71,6 +142,7 @@ footer {
     margin-left: 20px;
     text-align: center;
 
+
 }
 #infoboxHeading {
         color: white;
@@ -83,19 +155,9 @@ footer {
 #top5Heading{
     color: white;
     margin-top: 20px;
-    font-size: 35px;
+    font-size: 30px;
     font-family:  'Times New Roman', Times, serif;
-}
-
-.worldMap {
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 95%;
-    height: 100%; 
-    background-color: white;
-    padding: 10px; 
-    box-sizing: border-box; 
-    border-radius: 10px;
+    font-weight: bold;
 }
 
 /* Container to hold the graph and text side by side */
@@ -104,6 +166,14 @@ footer {
     justify-content: center; 
     padding: 20px; 
     gap: 20px; 
+}
+
+#graphHeading {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Graph and text combined box styling */
@@ -125,13 +195,15 @@ footer {
     text-align: center; 
 }
 
-/* Paragraph styling */
+/* Paragraph styling within textcontent */
 .textContent p {
     margin-bottom: 10px; 
     line-height: 1.6; 
-    font-family: Arial, sans-serif; 
+    font-family:  'Times New Roman', Times, serif;
     color: white; 
 }
+
+/*Styling for quiz container*/
 
 .box3 {
     margin-left: auto; 
@@ -183,21 +255,6 @@ legend {
 .legend-text span {
     font-size: 20px;
 }
-
-#Mwi {
-    font-weight: bolder;
-}
-
-#maptext {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 10px;
-    font-size: larger;
-    text-align: center;
-    font-family:  'Times New Roman', Times, serif;
-    
-}
-
 
 .quiz-container {
     text-align: center;
@@ -330,50 +387,6 @@ legend {
     opacity: 0;
 }
 
-#coverimageContainer {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    background-image: url('https://www.undp.org/sites/g/files/zskgke326/files/migration/pacific/file_171.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#coverimageText {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white; 
-    font-size: 70px; 
-    text-align: center; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); 
-    letter-spacing: 1px; 
-    text-transform: uppercase; 
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
-}
-
-
-
-.chartcontainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-#graphHeading {
-    color: white;
-    margin-top: 20px;
-    margin-bottom: 100px;
-    font-size: 35px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
 .whiteText {
     color: white;
 }
@@ -398,7 +411,14 @@ b {
 .border {
     border-bottom: 2px solid #8fb3ce;
     margin-top: 48px;
+    margin-bottom: 20px;
+}   
+html {scroll-behavior: smooth;}
+
+#marginbutton {
+    margin-bottom: 20px;
 }
+
 
 #barplot{
     display: flex;
