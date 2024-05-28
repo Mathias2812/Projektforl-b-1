@@ -1,4 +1,4 @@
-Entity,Share of waste recycled from total regional waste,Share of waste incinerated from total regional waste,Share of littered and mismanaged from total regional waste,Share of waste landfilled from total regional waste
+Entity, Recycled, Incinerated, Littered, Landfilled
 Americas (excl. USA),9.554245,1.1592599,29.180883,60.10561
 Asia (excl. China and India),8.351267,18.513683,33.74583,39.38922
 China,12.801141,23.762764,27.052067,36.384026
