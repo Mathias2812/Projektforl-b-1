@@ -193,7 +193,7 @@ footer {
 .textContent p {
     margin-bottom: 10px; 
     line-height: 1.6; 
-    font-family: Arial, sans-serif; 
+    font-family:  'Times New Roman', Times, serif;
     color: white; 
 }
 
