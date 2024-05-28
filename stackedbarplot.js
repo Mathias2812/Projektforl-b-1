@@ -108,25 +108,26 @@
 
     // Add the legend
     let legend = svg.append("g")
-      .attr("transform", "translate(" + ((width - subgroups.length * 100) / 2) + "," + (height + 110) + ")"); // Centered the legend horizontally
+      .attr("transform", "translate(" + ((width - subgroups.length * 150) / 2) + "," + (height + 110) + ")"); // Centered the legend horizontally
 
     legend.selectAll("rect")
       .data(subgroups)
       .enter()
       .append("rect")
-        .attr("x", function(d, i) { return i * 100; }) // Increased the spacing between legend items
+        .attr("x", function(d, i) { return i * 150; }) // Increased the spacing between legend items
         .attr("y", 0)
-        .attr("width", 10)
-        .attr("height", 10)
+        .attr("width", 16) // Increased the size of the colored rectangles
+        .attr("height", 20) // Increased the size of the colored rectangles
         .attr("fill", function(d) { return color(d); });
 
     legend.selectAll("text")
       .data(subgroups)
       .enter()
       .append("text")
-        .attr("x", function(d, i) { return i * 100 + 15; }) // Increased the spacing between legend items
-        .attr("y", 10)
+        .attr("x", function(d, i) { return i * 150 + 20; }) // Increased the spacing between legend items and rectangles
+        .attr("y", 13) // Adjusted the vertical position of the text
         .attr("fill", "white")
+        .style("font-size", "17px") // Increased the font size of the legend text
         .text(function(d) { return d; });
   });
 })();
