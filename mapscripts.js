@@ -3,7 +3,7 @@
     
 console.log("Script loaded");
 
-const apiUrl = 'http://localhost:4000/Data';
+const apiUrl = 'https://projektforl-b-1-1.onrender.com/Data';
 let worldData = [];
 
 // Fetch data from the API
