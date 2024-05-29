@@ -25,6 +25,8 @@ app.get("/", (request, response) => {
 app.get("/Data", db.getData);
 app.post("/insert-Data", db.insertData);
 app.post("/populate", db.populateData);
+app.get('/data/mwiOutliers', db.getmwiOutliers);  
+app.get('/data/wasteOutliers', db.getwasteOutliers);
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)

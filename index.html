@@ -1,38 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="stylesheet.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="http://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <a id="top"></a>
 </head>
 <body>
 
-    <div id="test"></div>
-    <script>
-        // Specify the API endpoint for food
-        const apiUrl = 'http://localhost:4000/Data';
+<!--  Landing page image goes here -->
+<div id="coverimageContainer">
+    <div  id="coverimageText">
+        How effective are we at recycling plastic?
+    </div> 
+</div>
 
-        // Make a GET request using the Fetch API
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(Data => {
-                // Process the retrieved foods
-                let html = '';
-                Data.forEach(Country => {
-                    html += `<p>${Country.country_name + " - " + Country.total_waste} </p>`;
-                    console.log(Country);
-                });
-                document.getElementById("test").innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+<div class="border" ></div>
 
-    </script>
+<!--  World map goes here -->
+
+    <div class="box">
+        <div class="tooltip"></div>   
+       <div class="worldMap"> 
+        <h1 d="headlineTop">Mismanaged plastic worldwide</h1>
+        <p id="maptext"> Explore how different countries manage their plastic waste and gain a quick overview of their effectiveness. Discover which nations excel in plastic waste management and which ones struggle the most, highlighting the global disparities in addressing this critical environmental issue.</p>
+        <svg id="my_data" width="300" height="400"></svg>
+        <p id="colorbartext">MWI Value:</p>
+        <div class="legend">
+            <div class="color-bar"></div>
+            <div class="legend-text">
+                <span>0%</span>
+                <span>25%</span>
+                <span>50%</span>
+                <span>75%</span>
+                <span>100%</span>
+            </div>
+        </div>
+        <p id="Mwi">Mismanaged Waste Index (MWI) 2023  = </p>
+        <p> Sum of uncollected and improperly managed waste, divided by the waste</p>
+        <p id="MwiNoData">Grey = No Data</p>
+        </div>
+    </div>
+    
+<!-- top 5 and info section goes here-->
+<div class="box2">
+    <div class="chartcontainer">
+        <div class="visual" id="top5"> 
+            <h1 id="top5Heading">Discover the biggest plastic waste sinners!</h1>
+                <p class="infoText">Mismanaged plastic waste in %</p>
+            <!-- Loading barchart script -->
+            <div id="barchart"></div>
+            <script src="barchart.js"></script>
+            <!-- 2 buttons that change the datasets for the barchart -->  
+        </div>
+        <div class="infoBox" class="textContent">
+            <h1  class="infoboxHeading"> Disparities in Plastic Waste Management </h1>
+
+            <p class="infoText">The bar chart reveals that both the Solomon Islands and Suriname mismanage <b>100%</b> of their plastic waste, with Mozambique, Madagascar, and Uganda following closely behind.
+                This indicates that all plastic waste produced in these countries ends up as litter, in landfills, or in the ocean and will most likely causes harm to our environment.
+            </p>
+            <br>
+            <p class="infoText">
+                Additionally, the world map highlights that African and other developing nations generally <b>have high MWI scores</b>, significantly contributing to the global plastic problem. However, the rest of the world generally scores low, hinting that they might have better resources to manage their plastic waste.
+            </p>
+            <br>
+            <p class="infoText"> Consequently when some countries score at or close to 100%, it appears there is <b>still some way to go </b> to achieve the UN's 2030 goal of reducing environmental impact by focusing on improved waste management.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Container to hold the graph and text -->
+<div class="graphTextContainer">
+    <!-- Graph and text combined in one box -->
+    <div class="graphBox">
+        <h1 id="graphHeading">Only <b>9%</b> of the world's plastic waste is being recycled</h1>
+        <div class="graph">
+            <div id="chart"></div>
+            <script src="continentgraph.js"></script>
+        </div>
+        <div class="textContent">
+            <p>Although the graph reveals that plastic recycling has increased since 2000, its notable that <b>only about 9%</b> of the world's total plastic waste is being recycled.</p>
+            <p>United States scoring the <b>lowest with about 4%</b>, ranking lower than Sub-Saharan Africa, and Middle East & North Africa. India and China scoring highest at around <b>13%</b></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="box2">
+        <div class="chartcontainer">
+            <div class="visual" id="barplot">
+                <h1 id="barplotHeading"> Fate of plastic waste worldwide </h1>
+
+<!-- Script here -->
+            <script src="stackedbarplot.js"></script>
+            <div id="barLegend"></div>
+            </div> 
+            
+            <div class="infoBox">
+                <h1 class="infoboxHeading"> Why aren't we recycling more plastic?</h1>
+<!-- Text goes here -->
+                <p class="infoText">The chart reveals that roughly <b>50%</b> of the worlds plastic waste is sent straight to landfill and another <b>22%</b> littered, putting it at risk of being leaked into rivers, lakes, and the ocean. Other findings reveal that the majority of plastic waste in the United States is sent to landfills, whereas incineration rates are high in Europe.</p>
+                <br>
+                <p class="infoText">Looking at the chart, it is evident that plastic waste management strategies vary significantly around the globe. Inefficient waste management strategies might be part of the problem, but the world's plastic crisis is <b>complex</b> and requires innovative solutions. Contamination and harmful chemicals complicate recycling, and the quality of plastic degrades after each recycling process. <b>Most plastics can only be recycled once or twice.</b> </p>
+
+            </div>
+        </div>
+
+</div>
+
+
+<!-- Quiz goes here -->
+
+</div>
+<div class="box3">
+    <p id="box3Heading">Test your knowledge on plastic waste!</p>
+    <div id="box3text">
+        <div class="quiz-container">
+            <div class="question" id="question"></div>
+            <div class="quizbuttons"> 
+            <button class="quizbutton" onclick="answer(true)">True</button>
+            <button class="quizbutton" onclick="answer(false)">False</button>
+            </div>
+            <div class="score" id="score"></div>
+            <div class="feedback" id="feedback"></div>
+            <div class="explanation" id="explanation"></div>
+            <button class="next-button" id="nextButton" onclick="nextQuestion()">Next Question</button>
+            </div>
+        <script src="quiz.js"></script>
+    </div>
+</div>
+
+<div class="border" ></div>
+
+ <!--  Button that takes you to the top of the page! -->
+<footer>
+    <a href="#top">Back to top</a>
+    <div id="marginbutton">
+    </div>
+</footer>
+<script src="mapscripts.js"></script>
+<script src="button.js"></script>
 </body>
 </html>
