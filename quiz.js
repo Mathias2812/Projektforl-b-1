@@ -6,10 +6,10 @@ const questions = [
     { question: "670.000 plastic bottles are bought every minute?", answer: false, explanation: "It's actually 1 million plastic bottles that are bought every minute." },
     { question: "Nearly one-quarter of the world's plastic waste is mismanaged or littered?", answer: true, explanation: "Which is around 82 million tonnes mismanaged in total, and a quarter of that is leaked to the environment." },
     { question: "Plastic bottles slowly dissipate and eventually disappear?", answer: false, explanation: "A plastic bottle can last for 450 years in the marine environment, slowly fragmenting into smaller and smaller pieces which never truly disappear." },
-    { question: "There will be more plastic in our oceans than fish by 2100?", answer: false, explanation: "There will be more plastic in the oceans by 2050 than fish, if we don't do anything about it." },
+    { question: "There will be more plastic in our oceans than fish by 2040?", answer: false, explanation: "There will be more plastic in the oceans by 2050 than fish, if we don't do anything about it." },
     { question: "Plastic is made primarily from fossil fuel?", answer: true, explanation: "Around 90% of all plastic is made of fossil fuel, and it can be very toxic to the world if managed wrong." },
     { question: "It takes 7 gallons of water to make one pound of plastic?", answer: false, explanation: "It takes approximately 22 gallons of water to make 1 pound of plastic" },
-    { question: "If everyone switched to reusable bottles and carton water, we would be able to save enough energy to power New York City for an entire month?", answer: true, explanation: "Now imagine if everything became recycled/reusable instead of 1 time uses, how much energy we would save in the long term?" },
+    { question: "If everyone switched to reusable bottles and carton water, we would be able to save enough energy to power New York City for an entire month?", answer: true, explanation: "Now imagine if everything became recycled/reusable instead of 1 time uses, how much energy would we save in the long term?" },
 ];
 
 // Variables to keep track of the quiz state
