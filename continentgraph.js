@@ -3,9 +3,7 @@
   const margin = { top: 20, right: 250, bottom: 100, left: 50 },
     width = 1200 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
-  
-  // Clear any existing SVG
-  d3.select("#chart").selectAll("*").remove();
+
   
   // Append the svg object to the body of the page
   const svg = d3
