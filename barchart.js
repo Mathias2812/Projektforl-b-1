@@ -83,7 +83,7 @@ function update(data) {
     .attr("width", x.bandwidth())
     .attr("y", function(d) { return y(d.mwi_value); })
     .attr("height", function(d) { return height - y(d.mwi_value); })
-    .attr("fill", "#33AFFF");
+    .attr("fill", "#5c97c4");
 
   // Add labels with data value
   svg.selectAll("rect")
