@@ -1,5 +1,6 @@
 (function() {
 
+    
 console.log("Script loaded");
 
 const apiUrl = 'http://localhost:4000/Data';
@@ -47,17 +48,16 @@ function drawMap(geoJsonData, worldData) {
         .center([0, 20])
         .translate([svgWidth / 2, svgHeight / 2]);
 
+//Colorscale on the worldmap
+
         let colorScale = d3.scaleLinear()
         .domain(d3.extent(worldData, d => d.mwi_value))
-        .range(["#81d4fa", "#01579b"]); // Slightly darker blue shades
-    
-    
+        .range(["#81d4fa", "#01579b"]); 
     
 
     let dataMap = new Map(worldData.map(d => [d.country_code, d]));
 
-    // Select tooltip element
-    let tooltip = d3.select(".tooltip");
+//Making the Colorscale use our mwi_value to color the map.
 
     svg.append("g")
         .selectAll("path")
