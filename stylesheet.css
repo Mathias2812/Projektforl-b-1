@@ -51,7 +51,7 @@ footer {
     margin-left: auto; 
             margin-right: auto; 
             width: 90%;
-            height: 1025px; 
+            height: 1050px; 
             background-color: #3d507a;
             padding: 50px; 
             box-sizing: border-box; 
@@ -79,6 +79,12 @@ footer {
     padding: 10px; 
     box-sizing: border-box; 
     border-radius: 10px;
+}
+
+#colorbartext {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 #Mwi {
