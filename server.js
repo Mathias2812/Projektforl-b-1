@@ -18,6 +18,10 @@ app.use(
      extended: true,
     })
 );
+
+const path = require("path")
+app.use(express.static(path.join(__dirname, "/")))
+
 app.get("/", (request, response) => {
     response.sendFile(__dirname + "/index.html");
   });
