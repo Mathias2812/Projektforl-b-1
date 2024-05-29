@@ -3,7 +3,7 @@
 let mwiOutliers = [];
 
 // Specify the API endpoint for Data
-const apiUrl = 'http://localhost:4000/data/mwiOutliers';
+const apiUrl = 'https://projektforl-b-1-1.onrender.com/data/mwiOutliers';
 
 fetch(apiUrl)
     .then(response => {
